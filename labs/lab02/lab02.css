@@ -1,0 +1,125 @@
+body
+{
+    background-color: gray;
+}
+
+h1
+{
+
+    font-size: 20px;
+	text-align: center;
+}
+
+h2
+{
+
+    font-size: 17px;
+    background-color: white;
+    border: 2px solid blue;
+    text-indent: 15px;
+    width: 85%;
+    height: 22px;
+}
+
+h3
+{
+
+	font-size: 16px;
+	text-decoration: underline;
+
+}
+
+.border
+{
+
+    display: table;
+    border: 2px solid brown;
+    margin: auto;
+    width: 85%;
+}
+
+.detail
+{
+
+    display: table-cell;
+    border-right: 2px dashed black;
+    margin-bottom: 2cm;
+    width: 33.3%;
+    padding-left: 5px;
+}
+
+.rightdetail
+{
+
+    display: table-cell;
+    margin-bottom: 2cm;
+    width: 33.3%;
+    padding-left: 5px;
+}
+
+.divider
+{
+
+    padding: 2px;
+}
+
+table
+{
+
+    width: 85%;
+    margin: auto;
+    border: 5px outset black;
+    width: 85%;
+}
+
+th, td
+{
+
+    border: 1px solid black;
+	vertical-align: middle;
+	height: 30px;
+}
+
+caption
+{
+
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+img
+{
+
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+}
+
+figcaption
+{
+
+    font-size: 18px;
+	font-weight: bold;
+    background-color: white;
+    border: 2px solid blue;
+    text-align: center;
+    width: 70%;
+    height: 22px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+}
+
+figure
+{
+	
+	display: inline;
+}
+
+a
+{
+
+	margin-left: 30px;
+}
