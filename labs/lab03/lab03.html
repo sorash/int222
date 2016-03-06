@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8" />
+	<title>INT222</title>
+	<script>
+
+	  var e1="", e2="", e3="", e4="", e5="", e6="", e7="", e8=0, e9="";
+
+	  // get first name and capitalize
+ 	  e1 = prompt("Enter your first name: ", "");
+ 	  alert(e1.charAt(0).toUpperCase() + e1.slice(1));
+
+	  // ask for a number
+	  e2 = prompt("Enter a number between 1 and 9 inclusive: ", "");
+	
+	  // ask for numbers separated by commas
+	  e3 = prompt("Enter 5 numbers separated by commas: ", "");
+	
+	  // ask for 3 colors separated by commas
+	  e4 = prompt("Enter 3 colors separated by commas: ", "");
+	
+	  // split numbers
+	  e6 = e3.split(',');
+	
+	  // split colors
+	  e7 = e4.split(',');
+
+	  // write table
+	  document.write("<table width='300px' align='center'>");
+	  document.write("<caption>The number in e2 is " + e2 + "</caption>");
+	  document.write("<tr>");
+	  document.write("<td colspan=5>Times Table for the number " + e2 + "</td>");
+	  document.write("</tr>");
+	  for(var i = 0; i < 12; i++)
+	  {
+	    document.write("<tr>");
+	    document.write("<td>" + e2 + "</td>");
+	    document.write("<td>*</td>");
+	    document.write("<td>" + (i + 1) + "</td>");
+	    document.write("<td>=</td>");
+	    document.write("<td>" + (e2 * (i + 1)) + "</td>");
+	    document.write("</tr>");
+	  }
+	  document.write("</table>");
+
+	  // sum up e6
+	  for(var i = 0; i < e6.length; i++)
+	  {
+	    e8 += e6[i] * 1;
+	  }
+	  alert(e8);
+
+	  // concatenate colors in e7
+	  for(var i = 0; i < e7.length; i++)
+	  {
+	    e9 += (e7[i] + "\n");
+	  }
+	  alert(e9);
+    </script>
+  </head>
+  
+  <body>
+  </body>
+</html>
