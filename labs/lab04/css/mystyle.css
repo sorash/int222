@@ -1,0 +1,174 @@
+p.name
+{
+	font-family: Courier New;
+	color: #0084B0;
+	font-size: 26px;
+	text-shadow: 2px 2px 2px #000000;
+	text-align: center;
+	margin: auto;
+	padding-bottom: 10px;
+}
+
+p.lab
+{
+	text-align: center;
+	text-decoration: underline; 
+	font-size: 18px; 
+	font-weight: bold; 
+	margin-bottom: -1px;
+}
+
+div.select
+{
+	margin-left: 20px;
+}
+
+select
+{
+	width: 140px;
+	height: 40px;
+	font-size: 14px;
+	margin: 0 auto;
+}
+
+hr
+{
+	border-color: red;
+	border-width: 2px;
+}
+
+textarea
+{
+	resize: none;
+}
+
+fieldset
+{
+	width: 330px;
+	border: 5px outset;
+	border-color: #9CFFA2 #008A00 #008A00 #9CFFA2;
+	margin: auto;
+	margin-bottom: 5px;
+}
+
+fieldset.specialInstructions
+{
+	margin-bottom: 30px;
+}
+
+legend
+{
+	background-color: #9CFFA2;
+	border: 3px groove;
+	border-color: #FF6161;
+	color: white;
+	text-shadow: 2px 2px 2px #000000;
+	font-family: Lucida Sans Unicode;
+	font-weight: bold;
+	padding: 1px;
+	padding-right: 5px;
+}
+
+label
+{
+	display:inline-block;
+	width: 100px;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+input[type=text]{
+	height: 25px;
+	margin-bottom: 5px;
+	margin-left: 40px;
+}
+
+footer
+{
+	background-color: black;
+	color: white;
+	text-align: center;
+	height: 25px;
+	line-height: 25px;	/* vertical alignment fix since vertical-align doesnt work...??? */
+	width: 50%;	/* so that it matches the width of table div */
+	border: 1px solid black;	/* so that it matches the width of table div */
+	margin-left: 5px;	/* so that it matches the width of table div */
+	margin-top: 25px;
+	padding-right: 10px;	/* so that it matches the width of table div */
+}
+
+input[type=submit]{
+	border: 1px solid black;
+	background-image: linear-gradient(#739FFF, #1760FF);	/* chrome support */
+	background-image: -moz-linear-gradient(left, #5294FF, #2478FF);	/* firefox support */
+	height: 30px;
+	width: 160px;
+	color: white;
+	font-size: 14px;
+}
+
+textarea
+{
+	width: 98%;
+}
+
+table.prices
+{
+	margin: auto;
+	border: 3px solid black;
+	width: 120px;
+}
+
+th.prices, td.prices
+{
+
+    border: 1px solid black;
+	vertical-align: middle;
+	height: 20px;
+	text-align: center;
+	font-size: 14px;
+}
+
+td.pricesBold
+{
+	border: 1px solid black;
+	vertical-align: middle;
+	height: 30px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+div.table
+{
+	background-color: lightgray;
+    display: table;
+    border: 1px solid gray;
+    width: 50%;
+	margin-left: 5px;
+	margin-top: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+}
+
+div.tableCell1
+{
+    display: table-cell;
+    margin-bottom: 2cm;
+    width: 15%;
+}
+
+div.tableCell2
+{
+    display: table-cell;
+    border: 1px solid gray;
+    margin-bottom: 2cm;
+}
+
+div.tableCell3
+{
+    display: table-cell;
+    border: 1px solid gray;
+    margin-bottom: 2cm;
+}

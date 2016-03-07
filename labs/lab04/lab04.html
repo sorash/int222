@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>INT222_161a02 - lab04</title>
+    <link rel="stylesheet" href="css/normalize.css"   type="text/css" media="screen" /> 
+    <link rel="stylesheet" href="css/mystyle.css"     type="text/css" media="screen" />
+  </head>
+  <body>
+    <div class="table">
+    <form method="post" name="example" action="https://zenit.senecac.on.ca/~emile.ohan/cgi-bin/echo-p.pl">
+		<div class="tableCell1">
+			<p class="lab">Lab 04</p>
+			<p class="name">Papa's<br />Pizza</p>
+			<hr />
+			<p class="name">416 or 905<br />222-2626</p>
+			<hr /><br />
+			
+			<table class="prices">
+			  <tr class="prices">
+			    <td class="prices">Small</td>
+				<td class="prices">$11.55</td>
+			  </tr>
+			  <tr class="prices">
+			    <td class="prices">Medium</td>
+				<td class="prices">$15.25</td>
+			  </tr>
+			  <tr class="prices">
+			    <td class="prices">Large</td>
+				<td class="prices">$22.00</td>
+			  </tr>
+			  <tr class="prices">
+			    <td class="prices">X-Large</td>
+				<td class="prices">$25.00</td>
+			  </tr>
+			  <tr class="prices">
+			    <td class="pricesBold" colspan="2">Toppings</td>
+			  </tr>
+			  <tr class="prices">
+			    <td class="prices">$1.79</td>
+				<td class="prices">Each</td>
+			  </tr>
+			  <tr class="prices">
+			    <td class="pricesBold" colspan="2">Plus 13% HST</td>
+			  </tr>
+			  <tr class="prices">
+			    <td class="pricesBold" colspan="2">Free Delivery</td>
+			  </tr>
+			</table>
+			
+			<br /><br />
+            Your Price<input type="text" name="price" id="price" maxlength="8" size="8" readonly="readonly" />	  
+			<br /><br />
+			<input type="submit" value="PLACE YOUR ORDER" />
+		</div>
+		
+		<div class="tableCell2">
+		    <fieldset>
+			  <legend>Personal Information</legend>
+			  <label>Name</label><input type="text" name="surname" id="surname" maxlength="15" size="15" />
+			  <br />  
+			  <label>Account No.</label><input type="text" name="client" id="client" maxlength="12" size="12"	/> 
+			  <br />  
+			  <label>Phone No.</label><input type="text" name="phone" id="phone" maxlength="12" size="12"	/>
+			  <br />  
+			  <label>Date of Birth</label><input type="text" name="dob" id="dob" maxlength="7" size="7" />
+			</fieldset>
+
+			<fieldset>
+			  <legend>Pizza size & Crust</legend>
+			  <div class="select">
+			  <select id="pizzaSize" name="size" size="2">
+			  <option value="Select Pizza Size">Select Pizza Size</option>
+			  <option value="S">Small</option>
+			  <option value="M">Medium</option>
+			  <option value="L">Large</option>
+			  <option value="X">X-Large</option>
+			  </select>
+					  
+			  <select id="pizzaCrust" name="crust" size="2">
+			  <option value="regular">Regular Crust</option>
+			  <option value="thin">Thin Crust</option>
+			  <option value="thick">Thick Crust</option>
+			  <option value="wheat">Whole Wheat Crust</option>
+			  </select>
+			  </div>
+			</fieldset>
+			
+			<fieldset>
+			  <legend>Cheeses</legend>
+			  <input type="radio" name="cheese" id="c01" value="Mozzarella" />Mozzarella
+			  <input type="radio" name="cheese" id="c02" value="Reduced Fat" />Reduced Fat
+			  <input type="radio" name="cheese" id="c03" value="Feta" />Feta
+			</fieldset>
+			
+			<fieldset>
+			  <legend>Sauces</legend>
+			  <input type="radio" name="sauce" id="s01" value="Pizza Sauce" checked="checked" />Pizza Sauce
+			  <input type="radio" name="sauce" id="s02" value="BBQ Sauce" />BBQ Sauce
+			  <input type="radio" name="sauce" id="s03" value="Garlic Sauce" />Garlic Sauce
+			</fieldset>
+			
+			<fieldset class="specialInstructions">
+			  <legend>Special Instructions</legend>
+			  <textarea name="note" id="note" maxlength="150" ></textarea>
+			</fieldset>
+		</div>
+								  
+		<div class="tableCell3">
+			<fieldset>
+			  <legend>Choose Toppings - $1.79 Each</legend>
+			  
+			  <br />
+			  
+			  <input type="checkbox" name="toppings" id="t01" value="Anchovies" />
+			  <span style="width:140px;display:inline-block;">Anchovies</span>
+			  <input type="checkbox" name="toppings" id="t07" value="Broccoli" />
+			  <span style="display:inline-block;">Broccoli</span>
+			  
+			  <br />
+			  
+			  <input type="checkbox" name="toppings" id="t02" value="Bacon" />
+			  <span style="width:140px;display:inline-block;">Bacon</span>
+			  <input type="checkbox" name="toppings" id="t08" value="Green Olives" />
+			  <span style="display:inline-block;">Green Olives</span>
+			  
+			  <br />
+			  
+			  <input type="checkbox" name="toppings" id="t03" value="Ham" />
+			  <span style="width:140px;display:inline-block;">Ham</span>
+			  <input type="checkbox" name="toppings" id="t09" value="Green Peppers" />
+			  <span style="display:inline-block;">Green Peppers</span>
+			  
+			  <br />
+			  
+			  <input type="checkbox" name="toppings" id="t04" value="Pepperoni" />
+			  <span style="width:140px;display:inline-block;">Pepperoni</span>
+			  <input type="checkbox" name="toppings" id="t10" value="Mushrooms" />
+			  <span style="display:inline-block;">Mushrooms</span>
+			  
+			  <br />
+			  
+			  <input type="checkbox" name="toppings" id="t05" value="Salami" />
+			  <span style="width:140px;display:inline-block;">Salami</span>
+			  <input type="checkbox" name="toppings" id="t11" value="Red Onions" />
+			  <span style="display:inline-block;">Red Onions</span>
+			  
+			  <br />
+			  
+			  <input type="checkbox" name="toppings" id="t06" value="Sausage" />
+			  <span style="width:140px;display:inline-block;">Sausage</span>
+			  <input type="checkbox" name="toppings" id="t12" value="Roasted Garlic" />
+			  <span style="display:inline-block;">Roasted Garlic</span>
+			</fieldset>
+			
+			<fieldset>
+			  <div id="special">
+			    <img src="papas.jpg" alt="" />
+			  </div>
+			</fieldset>
+		</div>
+	  </div>
+    </form>
+  </body>
+  
+  <footer>
+       <script>
+          var dt=new Date(document.lastModified);   // Get document last modified date
+          document.write('This page was last updated on '+dt.toLocaleString()) 
+       </script>
+  </footer>
+</html>
