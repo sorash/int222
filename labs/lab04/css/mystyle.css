@@ -56,6 +56,20 @@ fieldset.specialInstructions
 	margin-bottom: 30px;
 }
 
+fieldset.logo
+{
+	margin-top: 10px;
+	height: 350px;
+	background-image: linear-gradient(#F5F5F5, #CCCCCC);	/* chrome support */
+	background-image: -moz-linear-gradient(top, #F5F5F5, #CCCCCC);	/* firefox support */
+}
+
+div#special
+{
+	margin-top: 25%;
+	margin-left: 15%;
+}
+
 legend
 {
 	background-color: #9CFFA2;
@@ -77,10 +91,28 @@ label
 	font-size: 15px;
 }
 
-input[type=text]{
+label.price
+{
+	font-weight: normal;
+	font-size: 13px;
+	text-align: center;
+	display: block;
+	margin: auto;
+	margin-bottom: 3px;
+}
+
+input[type=text]
+{
 	height: 25px;
 	margin-bottom: 5px;
 	margin-left: 40px;
+}
+
+input[type=text].price
+{
+	display: block;
+    margin: auto;
+	margin-bottom: -20px;
 }
 
 footer
@@ -90,7 +122,7 @@ footer
 	text-align: center;
 	height: 25px;
 	line-height: 25px;	/* vertical alignment fix since vertical-align doesnt work...??? */
-	width: 50%;	/* so that it matches the width of table div */
+	width: 950px;	/* so that it matches the width of table div */
 	border: 1px solid black;	/* so that it matches the width of table div */
 	margin-left: 5px;	/* so that it matches the width of table div */
 	margin-top: 25px;
@@ -100,11 +132,15 @@ footer
 input[type=submit]{
 	border: 1px solid black;
 	background-image: linear-gradient(#739FFF, #1760FF);	/* chrome support */
-	background-image: -moz-linear-gradient(left, #5294FF, #2478FF);	/* firefox support */
+	background-image: -moz-linear-gradient(top, #739FFF, #1760FF);	/* firefox support */
 	height: 30px;
-	width: 160px;
+	width: 150px;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
 	color: white;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 textarea
@@ -141,10 +177,11 @@ td.pricesBold
 
 div.table
 {
-	background-color: lightgray;
+	background-image: linear-gradient(#F5F5F5, #CCCCCC);	/* chrome support */
+	background-image: -moz-linear-gradient(top, #F5F5F5, #CCCCCC);	/* firefox support */
     display: table;
     border: 1px solid gray;
-    width: 50%;
+    width: 950px;
 	margin-left: 5px;
 	margin-top: 5px;
 	padding-top: 10px;

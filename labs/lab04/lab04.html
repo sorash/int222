@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="table">
-    <form method="post" name="example" action="https://zenit.senecac.on.ca/~emile.ohan/cgi-bin/echo-p.pl">
+      <form method="post" name="example" action="https://zenit.senecac.on.ca/~emile.ohan/cgi-bin/echo-p.pl">
 		<div class="tableCell1">
 			<p class="lab">Lab 04</p>
 			<p class="name">Papa's<br />Pizza</p>
@@ -49,7 +49,7 @@
 			</table>
 			
 			<br /><br />
-            Your Price<input type="text" name="price" id="price" maxlength="8" size="8" readonly="readonly" />	  
+            <label class="price">Your Price</label><input class="price" type="text" name="price" id="price" maxlength="8" size="8" readonly="readonly" />	  
 			<br /><br />
 			<input type="submit" value="PLACE YOUR ORDER" />
 		</div>
@@ -153,20 +153,21 @@
 			  <span style="display:inline-block;">Roasted Garlic</span>
 			</fieldset>
 			
-			<fieldset>
+			<fieldset class="logo">
 			  <div id="special">
 			    <img src="papas.jpg" alt="" />
 			  </div>
 			</fieldset>
 		</div>
-	  </div>
-    </form>
-  </body>
+      </form>
+	</div>
+	
+	<footer>
+      <script>
+        var dt=new Date(document.lastModified);   // Get document last modified date
+        document.write('This page was last updated on '+dt.toLocaleString()) 
+	  </script>
+    </footer>
   
-  <footer>
-       <script>
-          var dt=new Date(document.lastModified);   // Get document last modified date
-          document.write('This page was last updated on '+dt.toLocaleString()) 
-       </script>
-  </footer>
+  </body>
 </html>
