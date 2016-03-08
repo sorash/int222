@@ -1,6 +1,6 @@
 p.name
 {
-	font-family: Courier New;
+	font-family: Courier New, sans-serif;
 	color: #0084B0;
 	font-size: 26px;
 	text-shadow: 2px 2px 2px #000000;
@@ -77,7 +77,7 @@ legend
 	border-color: #FF6161;
 	color: white;
 	text-shadow: 2px 2px 2px #000000;
-	font-family: Lucida Sans Unicode;
+	font-family: Lucida Sans Unicode, sans-serif;
 	font-weight: bold;
 	padding: 1px;
 	padding-right: 5px;
