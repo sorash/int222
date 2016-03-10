@@ -9,10 +9,10 @@ body
 	overflow : scroll;
 	margin : 5px auto;
 	width : 1200px;
-	height: 1100px;
 	font-family : georgia, sans-serif;
 	background-image: linear-gradient(#82B0FA, #0747AD);	/* chrome support */
 	background-image: -moz-linear-gradient(top, #82B0FA, #0747AD);	/* firefox support */
+	background-attachment: fixed;
 }
 
 nav 
@@ -52,13 +52,15 @@ nav ul li a
 section 
 {
 	float: left;
-	width: 53%;
+	width: 60%;
+	margin-left: 20px;
 }
 
 aside 
 {
 	float: right;
 	width: 30%;
+	margin-right: 20px;
 }
 
 footer 
@@ -80,11 +82,22 @@ footer
 	margin-bottom: 0;
 }
 
-p.asideHeader
+h3.asideHeader
 {
 	text-align: center;
 	text-decoration: underline;
 	font-weight: bold;
+}
+
+div.section
+{
+	background: green;
+	margin: 5px;
+	padding: 10px;
+	border-width: 10px;
+	border-style: groove;
+	border-color: red yellow;
+	box-shadow: 20px 20px 20px #000000;
 }
 
 div#socialMedia
@@ -100,6 +113,13 @@ div#socialMedia
 hr#asideHR
 {
 	border: 3px ridge purple;
+}
+
+p.wallOfText
+{
+	text-indent: 30px;
+	letter-spacing: 0.5px;
+	line-height: 27px;
 }
 
 /****************************************
