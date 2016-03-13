@@ -10,8 +10,9 @@ body
 	margin : 5px auto;
 	width : 1200px;
 	font-family : georgia, sans-serif;
-	background-image: linear-gradient(#82B0FA, #0747AD);	/* chrome support */
-	background-image: -moz-linear-gradient(top, #82B0FA, #0747AD);	/* firefox support */
+	background: #82B0FA;	/* for browsers that don't support gradient */
+	background: -webkit-linear-gradient(top, #82B0FA, #0747AD);	/* chrome support */
+	background: -moz-linear-gradient(top, #82B0FA, #0747AD);	/* firefox support */
 	background-attachment: fixed;
 }
 
@@ -52,15 +53,15 @@ nav ul li a
 section 
 {
 	float: left;
-	width: 60%;
+	width: 65%;
 	margin-left: 20px;
 }
 
 aside 
 {
 	float: right;
-	width: 30%;
-	margin-right: 20px;
+	width: 25%;
+	margin-right: 30px;
 }
 
 footer 
@@ -91,12 +92,14 @@ h3.asideHeader
 
 div.section
 {
-	background: green;
+	background: #7FB7C9;	/* for browsers that don't support gradient */
+	background: -webkit-linear-gradient(left, #7FB7C9 10%, #4D8A9E);	/* chrome support */
+	background: -moz-linear-gradient(left, #7FB7C9 10%, #4D8A9E);	/* firefox support */
 	margin: 5px;
 	padding: 10px;
 	border-width: 10px;
-	border-style: groove;
-	border-color: red yellow;
+	border-style: outset;
+	border-color: #00506B;
 	box-shadow: 20px 20px 20px #000000;
 }
 
@@ -120,6 +123,14 @@ p.wallOfText
 	text-indent: 30px;
 	letter-spacing: 0.5px;
 	line-height: 27px;
+	margin-left: 10px;
+}
+
+a.top
+{
+	margin-left: 95%;
+	font-weight: bold;
+	font-size: 14px;
 }
 
 /****************************************
@@ -127,3 +138,49 @@ p.wallOfText
 used by homepage
 
 ****************************************/
+
+
+
+/****************************************
+
+used by gallery page
+
+****************************************/
+
+p.capital
+{
+	text-indent: 30px;
+	letter-spacing: 0.5px;
+	line-height: 27px;
+	margin-left: 10px;
+	width: 65%;
+    float: left;
+}
+
+figure.picFig
+{
+	width: 25%;
+	margin-left: 70%;
+	background: #427CA1;
+	border: 7px outset #427CA1;
+}
+
+figcaption.picCap
+{
+    text-align: center;
+	display: block;
+	font-size: 12px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+}
+
+img
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 15px;
+	margin-top: 10px;
+	outline: 7px inset #427CA1;
+}
