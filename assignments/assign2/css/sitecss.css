@@ -118,6 +118,8 @@ div#socialMedia
 hr#asideHR
 {
 	border: 3px ridge #970DBD;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 p.wallOfText
