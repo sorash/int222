@@ -167,6 +167,8 @@ select
 	margin-left: -2px;
 	margin-right: -40px;
 	padding-top: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 div.noScroll
@@ -185,4 +187,19 @@ textarea
 	margin-bottom: 5px;
 	vertical-align: middle;
 	resize: none;
+}
+
+div#viewguests
+{
+	background: #81C87F;	/* for browsers that don't support gradient */
+	background: -webkit-linear-gradient(left, #81C87F 20%, #4DC866);	/* chrome support */
+	background: -moz-linear-gradient(left, #81C87F 20%, #4DC866);	/* firefox support */
+	margin: 5px;
+	margin-top: 30px;
+	margin-bottom: 60px;
+	padding: 10px;
+	border-width: 10px;
+	border-style: outset;
+	border-color: #006B15;
+	box-shadow: 20px 20px 20px #000000;
 }
