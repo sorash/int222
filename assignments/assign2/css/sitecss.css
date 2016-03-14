@@ -277,3 +277,50 @@ p.snippet
 	background: -moz-linear-gradient(left, #00B800 60%, #009100);	/* firefox support */
 	padding: 5px;
 }
+
+/****************************************
+
+used by tables page
+
+****************************************/
+
+table
+{
+	border-collapse: separate;
+	border-spacing: 20px;
+	border: 2px solid #CCCCCC;
+	margin: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+td
+{
+	padding: 10px;
+	border: 1px solid #000000;
+}
+
+td.color1
+{
+	background: #40A855;
+}
+
+td.color2
+{
+	background: #45B590;
+}
+
+td.color3
+{
+	background: #45B5B3;
+}
+
+td.color4
+{
+	background: #4599B5;
+}
+
+td.color5
+{
+	background: #4586B5;
+}

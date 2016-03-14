@@ -24,20 +24,70 @@
       </ul>
     </nav>
 	
-	<header>
-	  <p>Homepage</p>
-	</header>
-	
 	<section>
+	  <h1>Tables with CSS</h1>
 	
+	  <div class="section">
+		
+		<table>  
+		  <caption>HTML table with CSS</caption>
+		
+		  <tr>
+		    <td class="color1">This</td>
+			<td class="color1">Little</td>
+			<td class="color2">Piggy</td>
+			<td class="color3">Went</td>
+			<td class="color4">To</td>
+			<td class="color5">Market</td>
+		  </tr>
+		  
+		  <tr>
+			<td class="color1" colspan=2>This</td>
+			<td class="color1">Little</td>
+			<td class="color2">Piggy</td>
+			<td class="color3">Went</td>
+			<td class="color4">To</td>    
+		  </tr>
+		  
+		  <tr>
+			<td class="color1" colspan=4>This</td>
+			<td class="color1" rowspan=3>Little</td> 
+			<td class="color2">Piggy</td>
+		  </tr>
+		  
+		  <tr>
+			<td class="color1" rowspan=2>This</td>
+			<td class="color1">Little</td>
+			<td class="color2">Piggy</td>
+			<td class="color3">Went</td>
+			<td class="color4">To</td> 
+		  </tr>
+		  
+		  <tr>
+			<td class="color1">Little</td>
+			<td class="color1">Piggy</td>
+			<td class="color2">Went</td>
+			<td class="color3">To</td>    
+		  </tr>
+		</table>
+	  </div>
 	</section>
   
 	<aside>
 
+	  <h3 class="asideHeader">CSS Properties Used for Table</h3>
+	  <ol>
+		<li>border-collapse</li>
+		<li>border-spacing</li>
+		<li>border</li>
+		<li>margin</li>
+		<li>padding</li>
+		<li>background</li>
+	  </ol>
 	  
-	  <hr />
+	  <hr id="asideHR" />
 	  
-	  <p class="asideHeader">Social Media Links</p>
+	  <h3 class="asideHeader">Social Media Links</h3>
 	  <div id="socialMedia" style="background: url('social_media.png') no-repeat"> <!-- for some reason doing background has to be done from here and wont work from css file...?? -->
            <a href="http://facebook.com" title="Facebook" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 4px;"></a>
 		   <a href="http://twitter.com" title="Twitter" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 31px;"></a>
