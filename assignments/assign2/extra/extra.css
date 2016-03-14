@@ -145,7 +145,6 @@ h1
 	font-family: Trebuchet MS, Georgia;
 }
 
-/* animation keyframes */
 @keyframes move 
 {
     0% 
@@ -169,6 +168,19 @@ h1
 		left: 0px; top: 0px;
 	}
 }
+
+div.move
+{
+	width: 200px;
+	height: 200px;
+	border: 2px solid black;
+	position: relative;
+	animation-name: move;
+	animation-duration: 10s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
 @keyframes color
 {	
 	0% 
@@ -193,18 +205,6 @@ h1
 	}
 }
 
-div.move
-{
-	width: 200px;
-	height: 200px;
-	border: 2px solid black;
-	position: relative;
-	animation-name: move;
-	animation-duration: 10s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-}
-
 div.color
 {
 	position: relative;
@@ -214,6 +214,44 @@ div.color
 	width: 200px;
     height: 200px;
 	animation-name: color;
+    animation-duration: 10s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes pAnim
+{	
+	0% 
+	{ 
+		color: #DBD630;
+	}
+    25%
+	{ 
+		color: #3050DB;
+	}
+	50%
+	{ 
+		color: #DB3030;
+	}
+	75%
+	{ 
+		color: #30DB4A;
+	}
+	100%
+	{ 
+		color: #DBD630;
+	}
+}
+
+p.pAnim
+{
+	display: block;
+	margin: auto;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 750%;
+	font-size: 26px;
+	animation-name: pAnim;
     animation-duration: 10s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
