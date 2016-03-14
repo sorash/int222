@@ -196,16 +196,16 @@ img
 
 /****************************************
 
-used by video page
+used by video and audio pages
 
 ****************************************/
 
-figure.vid
+figure.media
 {
 	position: relative;	/* makes the video snap inside the div */
 }
 
-figcaption.vidCap
+figcaption.mediaCap	/* also used by audio page */
 {
 	text-align: center;
 	letter-spacing: 0.5px;
@@ -233,4 +233,12 @@ li.spacedItem
 button
 {
 	width: 150px;
+}
+
+audio
+{
+	width: 400px;
+	display: block;
+	margin: auto;
+	margin-bottom: 20px;
 }
