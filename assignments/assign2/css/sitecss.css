@@ -117,7 +117,7 @@ div#socialMedia
 
 hr#asideHR
 {
-	border: 3px ridge purple;
+	border: 3px ridge #970DBD;
 }
 
 p.wallOfText
@@ -133,6 +133,13 @@ a.top
 	margin-left: 95%;
 	font-weight: bold;
 	font-size: 14px;
+}
+
+h1
+{
+	text-shadow: 2px 2px 6px #000000;
+	font-size: 36px;
+	font-family: Trebuchet MS, Georgia;
 }
 
 /****************************************
@@ -195,11 +202,35 @@ used by video page
 
 figure.vid
 {
-	position: relative;
+	position: relative;	/* makes the video snap inside the div */
+}
+
+figcaption.vidCap
+{
+	text-align: center;
+	letter-spacing: 0.5px;
+	line-height: 27px;
 }
 
 video
 {
-	width: 100%;
+	width: 100%;	/* makes the video snap inside the div */
 	margin-bottom: 20px;
+}
+
+ul.noBullet
+{
+	list-style-type: none;
+	margin-left: -40px;
+	text-align: center;
+}
+
+li.spacedItem
+{
+	margin-bottom: 5px;
+}
+
+button
+{
+	width: 150px;
 }
