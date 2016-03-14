@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Assignment 2 - HTML 5</title>
+    <title>Assignment 2 - HTML5</title>
     <link rel="stylesheet" href="css/normalize.css"     type="text/css" media="screen" />
     <link rel="stylesheet" href="css/sitecss.css"   type="text/css" media="screen" /> 
   </head>
@@ -24,20 +24,93 @@
       </ul>
     </nav>
 	
-	<header>
-	  <p>Homepage</p>
-	</header>
-	
 	<section>
+	  <h1>HTML5</h1>
 	
+	  <div class="section">
+	    <h2>New Form Attributes</h2>
+		<hr />
+
+		<h3>How to set autofocus</h3>
+		<label>Autofocused field example</label><input type="text" name="field1" id="field1" autofocus />
+		<p class="snippet">&lt;label&gt;Autofocused field example&lt;/label&gt;&lt;input type="text" name="field1" id="field1" autofocus /&gt;</p>
+		
+		<hr />
+		
+		<h3>How to set a placeholder</h3>
+		<label>Field with a placeholder example</label><input type="text" name="field2" id="field2" placeholder="this is a placeholder" />
+		<p class="snippet">&lt;label&gt;Field with a placeholder example&lt;/label&gt;&lt;input type="text" name="field2" id="field2" placeholder="this is a placeholder" /&gt;</p>
+		
+		<hr />
+		
+		<h3>How to make a field required</h3>
+		<label>Required field example</label><input type="text" name="field3" id="field3" required />
+		<p class="snippet">&lt;label&gt;Required field example&lt;/label&gt;&lt;input type="text" name="field3" id="field3" required /&gt;</p>
+		
+		<hr />
+		
+		<h3>Using datalist to show options</h3>
+		<label>Datalist example</label><input class="datalist" type="text" name="field4" id="field4" list="options" placeholder="Click here or start typing to see options" />
+        <datalist id="options" name="field4">
+          <option value="Option 1">
+          <option value="Option 2">
+          <option value="Option 3">
+          <option value="Option 4">
+          <option value="Option 5">
+        </datalist>
+		<p class="snippet">
+		  &lt;label&gt;Datalist example&lt;/label&gt;&lt;input class="datalist" type="text" name="field4" id="field4" list="options" placeholder="Click here or start typing to see options" /&gt;
+		  <br /><br />
+		  &lt;datalist id="options" name="field4"&gt;<br />
+          &nbsp;&nbsp;&lt;option value="Option 1"&gt;<br />
+          &nbsp;&nbsp;&lt;option value="Option 2"&gt;<br />
+          &nbsp;&nbsp;&lt;option value="Option 3"&gt;<br />
+          &nbsp;&nbsp;&lt;option value="Option 4"&gt;<br />
+          &nbsp;&nbsp;&lt;option value="Option 5"&gt;<br />
+        &lt;/datalist&gt;
+		</p>
+		
+		<hr />
+		
+		<h3>How to make a valid E-Mail field</h3>
+		<label>E-Mail field example</label><input type="email" name="field5" id="field5" />
+		<p class="snippet">&lt;label&gt;E-Mail field example&lt;/label&gt;&lt;input type="email" name="field5" id="field5" /&gt;</p>
+		
+		<hr />
+		
+		<h3>How to make a valid URL field</h3>
+		<label>URL field example</label><input type="url" name="field6" id="field6" />
+		<p class="snippet">&lt;label&gt;URL field example&lt;/label&gt;&lt;input type="url" name="field6" id="field6" /&gt;</p>
+		
+		<br />
+		<a class="top" href="#">Top<a/>
+	  </div>
 	</section>
   
 	<aside>
 
+	  <h3 class="asideHeader">New HTML5 Attributes</h3>
+	  <ol>
+		<li class="spacedItem">Autofocus</li>
+		<li class="spacedItem">Placeholder</li>
+		<li class="spacedItem">Required</li>
+		<li class="spacedItem">'date' type</li>
+		<li class="spacedItem">'month' type</li>
+		<li class="spacedItem">'time' type</li>
+		<li class="spacedItem">'datetime' and 'datetime-local' types</li>
+		<li class="spacedItem">'week' type</li>
+		<li class="spacedItem">'color' type</li>
+		<li class="spacedItem">'number' type with ability to set range and increment/decrement steps</li>
+		<li class="spacedItem">Datalists</li>
+		<li class="spacedItem">'email' type</li>
+		<li class="spacedItem">'url' type</li>
+		<li class="spacedItem">'phone' type</li>
+		<li class="spacedItem">'search' type</li>
+	  </ol>
 	  
-	  <hr />
+	  <hr id="asideHR" />
 	  
-	  <p class="asideHeader">Social Media Links</p>
+	  <h3 class="asideHeader">Social Media Links</h3>
 	  <div id="socialMedia" style="background: url('social_media.png') no-repeat"> <!-- for some reason doing background has to be done from here and wont work from css file...?? -->
            <a href="http://facebook.com" title="Facebook" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 4px;"></a>
 		   <a href="http://twitter.com" title="Twitter" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 31px;"></a>

@@ -93,8 +93,8 @@ h3.asideHeader
 div.section
 {
 	background: #7FB7C9;	/* for browsers that don't support gradient */
-	background: -webkit-linear-gradient(left, #7FB7C9 10%, #4D8A9E);	/* chrome support */
-	background: -moz-linear-gradient(left, #7FB7C9 10%, #4D8A9E);	/* firefox support */
+	background: -webkit-linear-gradient(left, #7FB7C9 20%, #4D8A9E);	/* chrome support */
+	background: -moz-linear-gradient(left, #7FB7C9 20%, #4D8A9E);	/* firefox support */
 	margin: 5px;
 	margin-top: 30px;
 	margin-bottom: 60px;
@@ -243,4 +243,37 @@ audio
 	display: block;
 	margin: auto;
 	margin-bottom: 20px;
+}
+
+/****************************************
+
+used by html5 page
+
+****************************************/
+
+label
+{
+	margin-left: 50px;
+	display:inline-block;
+	width: 250px;
+}
+
+input[type=text].datalist
+{
+	width: 310px;
+}
+
+p.snippet
+{
+	border: 2px ridge #000000;
+	width: 85%;
+	display: block;
+	margin: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	background-color: #00B800;
+	background: #00B800;	/* for browsers that don't support gradient */
+	background: -webkit-linear-gradient(left, #00B800 60%, #009100);	/* chrome support */
+	background: -moz-linear-gradient(left, #00B800 60%, #009100);	/* firefox support */
+	padding: 5px;
 }
