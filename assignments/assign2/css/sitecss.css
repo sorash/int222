@@ -96,6 +96,8 @@ div.section
 	background: -webkit-linear-gradient(left, #7FB7C9 10%, #4D8A9E);	/* chrome support */
 	background: -moz-linear-gradient(left, #7FB7C9 10%, #4D8A9E);	/* firefox support */
 	margin: 5px;
+	margin-top: 30px;
+	margin-bottom: 60px;
 	padding: 10px;
 	border-width: 10px;
 	border-style: outset;
@@ -183,4 +185,21 @@ img
 	margin-bottom: 15px;
 	margin-top: 10px;
 	outline: 7px inset #427CA1;
+}
+
+/****************************************
+
+used by video page
+
+****************************************/
+
+figure.vid
+{
+	position: relative;
+}
+
+video
+{
+	width: 100%;
+	margin-bottom: 20px;
 }
