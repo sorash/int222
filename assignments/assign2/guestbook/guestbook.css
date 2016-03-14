@@ -158,6 +158,7 @@ input[type=text]
 	height: 25px;
 	margin-top: 5px;
 	margin-bottom: 5px;
+	vertical-align: middle;
 }
 
 select
@@ -177,6 +178,7 @@ div.noScroll
 	vertical-align: top;
 	overflow: hidden;
 	margin-left: -2px;
+	vertical-align: middle;
 }
 
 textarea
