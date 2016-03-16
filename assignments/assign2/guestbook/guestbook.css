@@ -182,13 +182,15 @@ input[type=text]
 
 select
 {
-	height: 275px;
+	height: 270px;
+	line-height: 275px;
 	width: 235px;
 	margin-left: -2px;
 	margin-right: -40px;
 	padding-top: 5px;
 	margin-top: 5px;
 	margin-bottom: 5px;
+	font: 100% sans-serif;
 }
 
 div.noScroll
