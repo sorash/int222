@@ -12,7 +12,7 @@
 	<nav>
       <ul>
         <li><a href="../">My Zenit Account</a></li>
-        <li><a href="index.html">Home</a></li>
+        <li><a class="current" href="index.html">Home</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="video.html">Video</a></li>
         <li><a href="audio.html">Audio</a></li>
@@ -84,45 +84,47 @@
 	</section>
 	
 	<aside>
-	  <h3 class="asideHeader">Recommended Links</h3>
-	  <ul>
-	    <li>HTML5
-		  <ol>
-		    <li><a href="http://www.html-5-tutorial.com/">HTML5 Tutorial</a></li>
-			<li><a href="http://www.instructables.com/id/HTML5-for-Beginners-A-4-Step-Quick-Learning-Guide/">Instructables</a></li>
-			<li><a href="http://websitesetup.org/html5-beginners-guide/">Website Setup</a></li>
-		  </ol>
-	    </li>
+	  <div class="section">
+	    <h3 class="asideHeader">Recommended Links</h3>
+	    <ul>
+	      <li class="spacedItem">HTML5
+		    <ol>
+		      <li class="spacedItem"><a href="http://www.html-5-tutorial.com/">HTML5 Tutorial</a></li>
+			  <li class="spacedItem"><a href="http://www.instructables.com/id/HTML5-for-Beginners-A-4-Step-Quick-Learning-Guide/">Instructables</a></li>
+			  <li class="spacedItem"><a href="http://websitesetup.org/html5-beginners-guide/">Website Setup</a></li>
+		    </ol>
+	      </li>
 	  
-	    <li>CSS
-		  <ol>
-			<li><a href="http://www.csstutorial.net/">CSS Tutorial</a></li>
-			<li><a href="http://www.tutorialspoint.com/css/">Tutorials Point</a></li>
-		  </ol>
-	    </li>
+	      <li class="spacedItem">CSS
+		    <ol>
+			  <li class="spacedItem"><a href="http://www.csstutorial.net/">CSS Tutorial</a></li>
+			  <li class="spacedItem"><a href="http://www.tutorialspoint.com/css/">Tutorials Point</a></li>
+		    </ol>
+	      </li>
 	  
-	    <li>JavaScript
-		  <ol>
-			<li><a href="https://www.codecademy.com/learn/javascript">Code Academy</a></li>
-			<li><a href="http://www.tutorialspoint.com/javascript/">Tutorials Point</a></li>
-		  </ol>
-	    </li>
-	  </ul>
+	      <li>JavaScript
+		    <ol>
+			  <li class="spacedItem"><a href="https://www.codecademy.com/learn/javascript">Code Academy</a></li>
+			  <li class="spacedItem"><a href="http://www.tutorialspoint.com/javascript/">Tutorials Point</a></li>
+		    </ol>
+	      </li>
+	    </ul>
 	  
-	  <hr id="asideHR" />
+	    <div id="asideHR" style="background: url('misc/hr.png') no-repeat; background-repeat:repeat-x; background-size:contain;"></div>
 	  
-	  <h3 class="asideHeader">Social Media Links</h3>
-	  <div id="socialMedia" style="background: url('misc/social_media.png') no-repeat"> <!-- for some reason doing background has to be done from here and wont work from css file...?? -->
-           <a href="http://facebook.com" title="Facebook" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 4px;"></a>
-		   <a href="http://twitter.com" title="Twitter" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 31px;"></a>
-		   <a href="http://pinterest.com" title="Pinterest" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 58px;"></a>
-		   <a href="http://plus.google.com" title="Google+" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 85px;"></a>
-		   <a href="http://myspace.com" title="Myspace" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 112px;"></a>
-		   <a href="http://linkedin.com" title="LinkedIn" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 139px;"></a>
-		   <a href="http://instagram.com" title="Instagram" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 166px;"></a>
-		   <a href="http://rss.com" title="RSS" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 193px;"></a>
-		   <a href="http://youtube.com" title="YouTube" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 220px;"></a>
-       </div>
+	    <h3 class="asideHeader">Social Media Links</h3>
+	    <div id="socialMedia" style="background: url('misc/social_media.png') no-repeat"> <!-- for some reason doing background has to be done from here and wont work from css file...?? -->
+             <a href="http://facebook.com" title="Facebook" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 4px;"></a>
+		     <a href="http://twitter.com" title="Twitter" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 31px;"></a>
+		     <a href="http://pinterest.com" title="Pinterest" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 58px;"></a>
+		     <a href="http://plus.google.com" title="Google+" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 85px;"></a>
+		     <a href="http://myspace.com" title="Myspace" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 112px;"></a>
+		     <a href="http://linkedin.com" title="LinkedIn" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 139px;"></a>
+		     <a href="http://instagram.com" title="Instagram" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 166px;"></a>
+		     <a href="http://rss.com" title="RSS" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 193px;"></a>
+		     <a href="http://youtube.com" title="YouTube" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 220px;"></a>
+         </div>
+	   </div>
 	</aside>
 	
 	<footer>

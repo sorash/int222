@@ -10,29 +10,32 @@ body
 	margin : 5px auto;
 	width : 1200px;
 	font-family : georgia, sans-serif;
-	background: #82B0FA;	/* for browsers that don't support gradient */
-	background: -webkit-linear-gradient(top, #82B0FA, #0747AD);	/* chrome support */
-	background: -moz-linear-gradient(top, #82B0FA, #0747AD);	/* firefox support */
-	background-attachment: fixed;
+	background: #595959;	/* for browsers that don't support gradient */
+	background: -webkit-linear-gradient(top, #595959, #262626);	/* chrome support */
+	background: -moz-linear-gradient(top, #595959, #262626);	/* firefox support */
+	background-attachment: fixed;	/* fixes cut off of background */
 }
 
 nav 
 {
-	text-align : center;
-	width : 1200px;
-	height : 40px;
-	border-radius : 10px;
-	background : #f3f3f3;
-	color : #000000;
-	border : #cccccc solid 1px;
+	display: block;
+    text-align: center;
+	line-height: 50px;
+	width: 95%;
+	margin: 0px auto;
+	height: 50px;
+	margin-top: 15px;
+	background: #BDBDBD;	/* for browsers that don't support gradient */
+	background: -webkit-linear-gradient(left, #BDBDBD 50%, #E0E0E0);	/* chrome support */
+	background: -moz-linear-gradient(left, #BDBDBD 50%, #E0E0E0);	/* firefox support */
+	border-radius: 25px;
 }
 nav ul 
 {
-	list-style-image : none;
-	list-style-position : outside;
-	list-style-type : none;
-	margin : 0 auto;
-	width : 96%;
+    list-style-type: none;
+	margin: 0px 0px;
+	width: 95%;
+	margin-left: -10px;
 }
 nav ul li 
 {
@@ -41,46 +44,62 @@ nav ul li
 }
 nav ul li a 
 {
-	padding-top : 10px;
-	margin-right : 30px;
-	display : block;
-	line-height : 40px;
-	font : 75% georgia, sans-serif;
-	color : #336699;
-	background : #f3f3f3;
+	display: block;
+	line-height: 50px;
+    color: #000000;
+	padding-left: 17px;
+	padding-right: 17px;
+    text-decoration: none;
+	font-size: 18px;
+	font-family: Trebuchet MS, Georgia;
+}
+nav li a:hover 
+{
+    background-color: #363636;
+}
+nav li a.current
+{
+	background-color: #595959;
+}
+nav li a.current:hover
+{
+	background-color: #363636;
 }
 
 section 
 {
 	float: left;
-	width: 65%;
+	width: 67%;
 	margin-left: 20px;
+	margin-top: 10px;
 }
 
 aside 
 {
 	float: right;
-	width: 25%;
-	margin-right: 30px;
+	margin-top: 75px;
+	width: 27%;
+	margin-right: 20px;
 }
 
 footer 
 {
-	width : 1200px;
-	height : 30px;
-	border-radius : 10px;
-	background : #FFFFFF;
-	color : #336699;
-	border : #cccccc solid 1px;
-	position : relative;
-	text-align : center;
-	font-size : 11px;
-	font-weight : bold;
-	display : inline-block;
-	margin : auto;
-	padding-top : 10px;
 	clear: both;
-	margin-bottom: 0;
+	display: block;
+    text-align: center;
+	line-height: 40px;
+	width: 95%;
+	margin: 0px auto;
+	height: 40px;
+	margin-top: 15px;
+	background: #BDBDBD;	/* for browsers that don't support gradient */
+	background: -webkit-linear-gradient(left, #BDBDBD 50%, #E0E0E0);	/* chrome support */
+	background: -moz-linear-gradient(left, #BDBDBD 50%, #E0E0E0);	/* firefox support */
+	border-radius: 25px;
+	text-decoration: none;
+	font-size: 14px;
+	font-family: Trebuchet MS, Georgia;
+	color: #000000;
 }
 
 h3.asideHeader
@@ -92,16 +111,14 @@ h3.asideHeader
 
 div.section
 {
-	background: #7FB7C9;	/* for browsers that don't support gradient */
-	background: -webkit-linear-gradient(left, #7FB7C9 20%, #4D8A9E);	/* chrome support */
-	background: -moz-linear-gradient(left, #7FB7C9 20%, #4D8A9E);	/* firefox support */
+	background: #808080;	/* for browsers that don't support gradient */
+	background: -webkit-linear-gradient(left, #808080 20%, #5E5E5E);	/* chrome support */
+	background: -moz-linear-gradient(left, #808080 20%, #5E5E5E);	/* firefox support */
 	margin: 5px;
 	margin-top: 30px;
 	margin-bottom: 60px;
 	padding: 10px;
-	border-width: 10px;
-	border-style: outset;
-	border-color: #00506B;
+	border: 10px outset #A1A1A1;
 	box-shadow: 20px 20px 20px #000000;
 }
 
@@ -115,11 +132,13 @@ div#socialMedia
 	height: 140px;
 }
 
-hr#asideHR
+div#asideHR
 {
-	border: 3px ridge #970DBD;
-	margin-top: 50px;
-	margin-bottom: 50px;
+	width: 88%;
+	height: 30px;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 p.wallOfText
@@ -172,8 +191,8 @@ figure.picFig
 {
 	width: 25%;
 	margin-left: 70%;
-	background: #427CA1;
-	border: 7px outset #427CA1;
+	border: 7px outset #454545;
+	background: #454545;
 }
 
 figcaption.picCap
@@ -193,7 +212,7 @@ img
 	margin-right: auto;
 	margin-bottom: 15px;
 	margin-top: 10px;
-	outline: 7px inset #427CA1;
+	outline: 7px inset #454545;
 }
 
 /****************************************
@@ -229,7 +248,7 @@ ul.noBullet
 
 li.spacedItem
 {
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 
 button
@@ -271,10 +290,9 @@ p.snippet
 	margin: auto;
 	margin-top: 15px;
 	margin-bottom: 15px;
-	background-color: #00B800;
-	background: #00B800;	/* for browsers that don't support gradient */
-	background: -webkit-linear-gradient(left, #00B800 60%, #009100);	/* chrome support */
-	background: -moz-linear-gradient(left, #00B800 60%, #009100);	/* firefox support */
+	background: #008C13;	/* for browsers that don't support gradient */
+	background: -webkit-linear-gradient(left, #008C13 30%, #00570C);	/* chrome support */
+	background: -moz-linear-gradient(left, #008C13 30%, #00570C);	/* firefox support */
 	padding: 5px;
 }
 
