@@ -208,8 +208,6 @@ div.move
 div.color
 {
 	background: #7FB7C9;	/* for browsers that don't support gradient */
-	background: -webkit-linear-gradient(left, #DB3030 20%, #30DB4A);	/* chrome support */
-	background: -moz-linear-gradient(left, #DB3030 20%, #30DB4A);	/* firefox support */
 	width: 200px;
     height: 200px;
 	animation-name: color;
