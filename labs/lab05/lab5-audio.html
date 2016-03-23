@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment 2 - Audio</title>
+    <link rel="stylesheet" href="css/normalize.css"     type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/sitecss.css"   type="text/css" media="screen" /> 
+  </head>
+  
+  <body>
+  
+	<nav>
+      <ul>
+        <li><a href="../">My Zenit Account</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a class="current" href="audio.html">Audio</a></li>
+        <li><a href="html5.html">HTML 5</a></li>
+        <li><a href="tables.html">Tables</a></li>
+        <li><a href="guestbook/index.html">Guest Book</a></li>
+        <li><a href="extra/index.html">Extra</a></li>
+		<li><a href="css/sitecss.css">CSS Used</a></li>
+      </ul>
+    </nav>
+	
+	<section>
+	  <h1>Audio</h1>
+	  
+	  <div class="section">
+	    <h2>In the Hall of Mountain King by Grieg</h2>
+		<hr />
+		<figure class="media">
+		  <audio controls>
+			<source src="misc/In%20the%20Hall%20of%20Mountain%20King.mp3" type="audio/mpeg">
+			Your browser does not support the playback of audio.
+		  </audio>
+		  <figcaption class="mediaCap">
+		    In the Hall of Mountain King is a piece of classical music composed by Edvard Grieg for the 1876 play Peer Gynt. It is interesting to note
+			the translation of the name of this piece is not literal, and the original words may be interpreted as a different meaning. The key of the 
+			piece is B minor.
+		  </figcaption> 
+		</figure>
+		
+		<script>
+          var audio = document.getElementsByTagName('audio')[0];
+		</script>
+	  </div>
+	</section>
+  
+	<aside>
+	  <div class="section">
+	    <h3 class="asideHeader">Audio Control Options</h3>
+	    <ul class="noBullet">
+		  <li class="spacedItem"><button type="button" onclick="audio.play();">Play</button></li>
+		  <li class="spacedItem"><button type="button" onclick="audio.pause();">Pause</button></li>
+		  <li class="spacedItem"><button type="button" onclick="audio.volume=1;">Volume On</button></li>
+		  <li class="spacedItem"><button type="button" onclick="audio.volume=0">Volume Off</button></li>
+		  <li class="spacedItem"><button type="button" onclick="audio.volume+=0.1;">Increase Volume</button></li>
+		  <li class="spacedItem"><button type="button" onclick="audio.volume-=0.1;">Decrease Volume</button></li>
+	    </ul>
+	  
+	    <div id="asideHR" style="background: url('misc/hr.png') no-repeat; background-repeat:repeat-x; background-size:contain;"></div>
+	  
+	    <h3 class="asideHeader">Social Media Links</h3>
+	    <div id="socialMedia" style="background: url('misc/social_media.png') no-repeat"> <!-- for some reason doing background has to be done from here and wont work from css file...?? -->
+             <a href="http://facebook.com" title="Facebook" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 4px;"></a>
+		     <a href="http://twitter.com" title="Twitter" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 31px;"></a>
+		     <a href="http://pinterest.com" title="Pinterest" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 58px;"></a>
+		     <a href="http://plus.google.com" title="Google+" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 85px;"></a>
+		     <a href="http://myspace.com" title="Myspace" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 112px;"></a>
+		     <a href="http://linkedin.com" title="LinkedIn" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 139px;"></a>
+		     <a href="http://instagram.com" title="Instagram" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 166px;"></a>
+		     <a href="http://rss.com" title="RSS" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 193px;"></a>
+		     <a href="http://youtube.com" title="YouTube" style="width: 23px; height: 23px; border: 0; position: absolute; top: 3px; left: 220px;"></a>
+         </div>
+	  </div>
+	</aside>
+  
+	<footer>
+      <script>
+        var dt=new Date(document.lastModified);   // Get document last modified date
+        document.write('This page was last updated on '+dt.toLocaleString()) 
+      </script>
+    </footer>
+  </body>
+</html>
