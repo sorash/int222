@@ -105,7 +105,7 @@ function formValidation()
 	document.getElementById('errors').innerHTML = "";
 	
 	// validate all fields and set error message
-	errMsg += checkUserId(errMsg) + checkClient(errMsg) + checkPropValue(errMsg) + checkDownPay(errMsg) + checkIncome(errMsg) + checkPropDetails(errMsg) + checkPropLocation(errMsg);
+	errMsg += checkUserId(errMsg) + checkClient(errMsg) + checkPropValue(errMsg) + checkDownPay(errMsg) + checkIncome(errMsg) + checkPropDetails(errMsg) + checkPropLocation(errMsg) + checkMortYear(errMsg) + checkMortMonth(errMsg);
 	
 	if(errMsg != "")
 		document.getElementById('errors').innerHTML = errMsg;
@@ -350,6 +350,60 @@ function checkPropLocation(errMsg)
 	// check if an option is selected
 	if(!propLocation)
 		errMsg += "<p>You must choose a property location.</p>";
+	
+	return errMsg;
+}
+
+// validate mortgage year
+function checkMortYear(errMsg)
+{
+	var mortYear = document.mortgage.mortYear.value;
+	
+	// check if contains a value
+	if(mortYear)
+	{
+		// check if value is numeric
+		if(!(isNaN(mortYear)))
+		{
+			// get current year
+			var curYear = new Date().getFullYear();
+			
+			// check if value is current year or one greater than current year
+			if(mortYear != curYear && mortYear != curYear + 1)
+				errMsg += "<p>Value for mortgage year must be equal to or one greater than current year.</p>";
+		}
+		else
+			errMsg += "<p>Value for mortgage year must be numeric.</p>";
+	}
+	else
+		errMsg += "<p>You must enter a value for mortgage year.</p>";
+	
+	return errMsg;
+}
+
+// validate mortgage month
+function checkMortMonth(errMsg)
+{
+	var mortMonth = document.mortgage.mortMonth.value;
+	
+	// check if contains a value
+	if(mortMonth)
+	{
+		// check if value is numeric
+		if(!(isNaN(mortMonth)))
+		{
+			// get current month
+			var curMonth = new Date().getMonth() + 1;	// month is treated like an array...???
+			
+			// check if value is equal to or one greater than current month
+			if(mortMonth != curMonth && mortMonth != curMonth + 1)
+				errMsg += "<p>Value for mortgage month must be equal to or one greater than current month.</p>";	
+		}
+		else
+			errMsg += "<p>Value for mortgage month must be numeric.</p>";
+	}
+	else
+		errMsg += "<p>You must enter a value for mortgage month.</p>";
 	
 	return errMsg;
 }
