@@ -1,1 +1,25 @@
-   
+/****************************************
+
+used by both pages
+
+****************************************/
+
+p.wallOfText
+{
+	text-indent: 30px;
+	letter-spacing: 0.5px;
+	line-height: 27px;
+	margin-left: 10px;
+}
+
+label
+{
+	display:inline-block;
+	width: 110px;
+}
+
+fieldset
+{
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
