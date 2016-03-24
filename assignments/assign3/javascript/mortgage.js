@@ -104,16 +104,17 @@ function formValidation()
 	var errMsg = "";
 	document.getElementById('errors').innerHTML = "";
 	
-	errMsg += checkUserId(errMsg);
+	// validate all fields and set error message
+	errMsg += checkUserId(errMsg) + checkClient(errMsg) + checkPropValue(errMsg);
 	
 	if(errMsg != "")
 		document.getElementById('errors').innerHTML = errMsg;
 
 } // End of completeFormValidation
 
+// validates client ID
 function checkUserId(errMsg)
 {
-	var userIdValid = false;
 	var userId = document.mortgage.userId.value;
 	
 	// check that all 10 values are present
@@ -123,6 +124,7 @@ function checkUserId(errMsg)
 		if(userId.charAt(4) == '-')
 		{
 			var i, sum1 = 0, sum2 = 0;
+			
 			// check if first 4 characters are numeric
 			for(i = 0; i < 4; i++)
 			{
@@ -172,6 +174,116 @@ function checkUserId(errMsg)
 	}
 	else
 		errMsg += "<p>The user ID must be 10 characters long.</p>";
+	
+	return errMsg;
+}
+
+// validates client name
+function checkClient(errMsg)
+{
+	var client = document.mortgage.client.value;
+	
+	// check if a value exists
+	if(client)
+	{
+		/* RegEx use not allowed in checking for this assignment so RIP these two...
+		// check if value is alphabetic
+		if(client.match(/^['a-zA-Z]+$/))	// checks if contains ', a-z, or A-Z -- ^ checks start of text, + matches more of the preceding characters, and $ checks the end of text
+		{	
+			// check if first 3 letters are alphabetical
+			if(client.charAt(0).match(/^[a-zA-Z]+$/) != null && client.charAt(1).match(/^[a-zA-Z]+$/) != null && client.charAt(2).match(/^[a-zA-Z]+$/) != null)
+			{
+		*/
+		
+		var x;
+		
+		// check all letters for alphabetic characters or apostrophe
+		for(x = 0; x < client.length; x++)
+		{
+			var topCap = 'A'.charCodeAt(0), bottomCap = 'Z'.charCodeAt(0), topLow = 'a'.charCodeAt(0), bottomLow = 'z'.charCodeAt(0);
+			var c = client.charCodeAt(x);
+		
+			if((c <= bottomCap && c >= topCap) || (c <= bottomLow && c >= topLow) || client.charAt(x) == '\'')
+				continue;
+			else
+				break;
+		}
+		
+		// check if loop completed
+		if(x == client.length)
+		{
+			// check first 3 letters for alphabetic characters
+			for(x = 0; x < 4; x++)
+			{
+				var topCap = 'A'.charCodeAt(0), bottomCap = 'Z'.charCodeAt(0), topLow = 'a'.charCodeAt(0), bottomLow = 'z'.charCodeAt(0);
+				var c = client.charCodeAt(x);
+		
+				if((c <= bottomCap && c >= topCap) || (c <= bottomLow && c >= topLow))
+					continue;
+				else
+					break;
+			}
+			
+			// check if loop compeleted
+			if(x == 4)
+			{
+				// check if name contains apostrophe at beginning or end
+				if(client.charAt(0) != '\'' && client.charAt(client.length - 1) != '\'')	// check for first letter doesn't really ever fire since first letter has to be alphabetic with last check...
+				{
+					var i, aposCount = 0, invalidApos = false;
+				
+					// check apostrophe count
+					for(i = 0; i < client.length; i++)
+					{
+						if(client.charAt(i) == '\'')
+							aposCount++;
+					}
+			
+					// check if there are multiple apostrophes
+					if(aposCount > 1)
+						errMsg += "<p>Name can only include one apostrophe.</p>";
+				}
+				else
+					errMsg += "<p>Name can not have an apostrophe as the first or last letter.</p>";
+			}
+			else
+				errMsg += "<p>First 3 characters of name must be alphabetical.</p>";
+		}
+		else
+			errMsg += "<p>Name can only contain alphabetical characters and one apostrophe (optional).</p>";
+	}
+	else
+		errMsg += "<p>You must put a value for client name.</p>";
+	
+	return errMsg;
+}
+
+// validates property value
+function checkPropValue(errMsg)
+{
+	var propValue = document.mortgage.propValue.value;
+	
+	// check if contains a value
+	if(propValue)
+	{
+		// check if value is numeric
+		if(!(isNaN(propValue)))
+		{
+			// check if value is a positive whole number
+			if((propValue > 0) && (propValue % 1 == 0))
+			{
+				// check if value is at least 65,000 more than down payment
+				if(propValue < document.mortgage.downPay.value * 1 + 65000)
+					errMsg += "<p>Property value must be at least 65,000 more than down payment.</p>";
+			}
+			else
+				errMsg += "<p>Property value must be a positive whole number.</p>";
+		}
+		else
+			errMsg += "<p>Property value must be numeric.</p>";
+	}
+	else
+		errMsg += "<p>You must enter a value for the property.</p>";
 	
 	return errMsg;
 }
