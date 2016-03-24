@@ -105,7 +105,7 @@ function formValidation()
 	document.getElementById('errors').innerHTML = "";
 	
 	// validate all fields and set error message
-	errMsg += checkUserId(errMsg) + checkClient(errMsg) + checkPropValue(errMsg);
+	errMsg += checkUserId(errMsg) + checkClient(errMsg) + checkPropValue(errMsg) + checkDownPay(errMsg) + checkIncome(errMsg) + checkPropDetails(errMsg) + checkPropLocation(errMsg);
 	
 	if(errMsg != "")
 		document.getElementById('errors').innerHTML = errMsg;
@@ -284,6 +284,72 @@ function checkPropValue(errMsg)
 	}
 	else
 		errMsg += "<p>You must enter a value for the property.</p>";
+	
+	return errMsg;
+}
+
+// validates down payment
+function checkDownPay(errMsg)
+{
+	var downPay = document.mortgage.downPay.value;
+	
+	// check if contains a value
+	if(downPay)
+	{
+		// check if value is numeric
+		if(!(isNaN(downPay)))
+		{
+			// check if value is a positive whole number
+			if((downPay > 0) && (downPay % 1 == 0))
+			{
+				// check if value is at least 20% of property value
+				if(downPay < document.mortgage.propValue.value * 0.2)
+					errMsg += "<p>Down payment value must be at least 20% of the property value.</p>";
+			}
+			else
+				errMsg += "<p>Down payment value must be a positive whole number.</p>";
+		}
+		else
+			errMsg += "<p>Down payment value must be numeric.</p>";
+	}
+	else
+		errMsg += "<p>You must enter a value for down payment.</p>";
+	
+	return errMsg;
+}
+
+// validates income value
+function checkIncome(errMsg)
+{
+	var income = document.mortgage.income.value;
+	
+	// check if an option is selected
+	if(!income)
+		errMsg += "<p>You must choose an income range.</p>";
+	
+	return errMsg;
+}
+
+// validates property details
+function checkPropDetails(errMsg)
+{
+	var propDetails = document.mortgage.propDetails.value;
+	
+	// check if an option is selected
+	if(!propDetails)
+		errMsg += "<p>You must choose a property type.</p>";
+	
+	return errMsg;
+}
+
+// validates property location
+function checkPropLocation(errMsg)
+{
+	var propLocation = document.mortgage.propLocation.value;
+	
+	// check if an option is selected
+	if(!propLocation)
+		errMsg += "<p>You must choose a property location.</p>";
 	
 	return errMsg;
 }
