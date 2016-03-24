@@ -8,6 +8,7 @@ body
 {
 	width: 1000px;
 	height: 900px;
+	border: 2px solid black;
 }
 
 section
@@ -90,6 +91,8 @@ fieldset
 textarea
 {
 	resize: none;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 .centerElem
@@ -108,7 +111,7 @@ span.radio
 
 fieldset#errors
 {
-	height: 290px;
+	height: 410px;
 	font-size: 14px;
 	color: #FF0000;
 }
