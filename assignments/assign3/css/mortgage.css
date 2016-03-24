@@ -87,6 +87,11 @@ fieldset
 	margin-left: 8px;
 }
 
+textarea
+{
+	resize: none;
+}
+
 .centerElem
 {
 	position:  relative;
