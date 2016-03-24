@@ -37,7 +37,8 @@ function detailPaymentCalculation(mortAmount,mortDownPayment,mortRate,mortAmorti
 } // End of detailPaymentCalculation function
 
 
-function calculatePayment() {   
+function calculatePayment()
+{   
 
     //********************************************************************************//
     //*   You will need to call the functions that validate the following:           *//
@@ -60,11 +61,14 @@ function calculatePayment() {
     //*                                                                              *//
     //********************************************************************************//
 
+	formValidation();
+	
 } // End of calculatePayment function
 
 
 
-function formValidation() {
+function formValidation()
+{
 
     //***************************************************************************************//
     //*                                                                                     *//
@@ -97,6 +101,77 @@ function formValidation() {
     //*                                                                                     *//
     //***************************************************************************************//
 
-
+	var errMsg = "";
+	document.getElementById('errors').innerHTML = "";
+	
+	errMsg += checkUserId(errMsg);
+	
+	if(errMsg != "")
+		document.getElementById('errors').innerHTML = errMsg;
 
 } // End of completeFormValidation
+
+function checkUserId(errMsg)
+{
+	var userIdValid = false;
+	var userId = document.mortgage.userId.value;
+	
+	// check that all 10 values are present
+	if(userId.length == 10)
+	{
+		// check if 5th value is a hyphen
+		if(userId.charAt(4) == '-')
+		{
+			var i, sum1 = 0, sum2 = 0;
+			// check if first 4 characters are numeric
+			for(i = 0; i < 4; i++)
+			{
+				// break the loop if is not a number
+				if(isNaN(userId.charAt(i)))
+					break;
+				// else add it to the sum
+				else
+					sum1 += userId.charAt(i) * 1;
+			}
+			
+			// check if loop completed
+			if(i == 4)
+			{
+				// check if last 5 characters are numeric
+				for(i = 5; i < userId.length; i++)
+				{
+					// break the loop if is not a number
+					if(isNaN(userId.charAt(i)))
+						break;
+					// else add it to the sum
+					else
+						sum2 += userId.charAt(i) * 1;
+				}
+				
+				// check if loop completed
+				if(i == userId.length)
+				{
+					// check if sum1 and sum2 are greater than zero
+					if(sum1 > 0 && sum2 > 0)
+					{
+						// check if sum2 is 2 more than double sum1
+						if(sum2 != (sum1 * 2) + 2)
+							errMsg += "<p>The sum of last 5 numbers is not double plus 2 of sum of first 4 numbers.</p>";
+					}
+					else
+						errMsg += "<p>The sum of the first 4 numbers or last 5 numbers is not greater than zero.</p>";
+				}
+				else
+					errMsg += "<p>One of the last 5 characters is not numeric.</p>";
+			}
+			else
+				errMsg += "<p>One of the first 4 characters is not numeric.</p>";
+		}
+		else
+			errMsg += "<p>The 5th character of user ID must be a hyphen(-).</p>";
+	}
+	else
+		errMsg += "<p>The user ID must be 10 characters long.</p>";
+	
+	return errMsg;
+}
