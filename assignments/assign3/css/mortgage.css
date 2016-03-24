@@ -4,6 +4,37 @@ used by both pages
 
 ****************************************/
 
+body
+{
+	width: 1000px;
+	height: 900px;
+}
+
+section
+{
+    display: table;
+    border: 1px solid gray;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	width: 98%;
+}
+
+div.cell
+{
+    display: table-cell;
+    margin-bottom: 2cm;
+    width: 35%;
+}
+
+hr
+{
+	margin-left: 7px;
+}
+
 p.wallOfText
 {
 	text-indent: 30px;
@@ -16,10 +47,61 @@ label
 {
 	display:inline-block;
 	width: 110px;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+label.moreSpace
+{
+	width: 130px;
+}
+
+input
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	height: 30px;
+	vertical-align: middle;
+}
+
+div.selects
+{
+	display: inline-block;
+	margin-right: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+select
+{
+	padding-top: 3px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 fieldset
 {
 	margin-bottom: 15px;
 	margin-top: 15px;
+	margin-left: 8px;
+}
+
+.centerElem
+{
+	position:  relative;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+span.radio
+{
+	display: inline-block;
+	width: 120px;
+}
+
+fieldset#special
+{
+	height: 290px;
 }
