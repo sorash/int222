@@ -61,6 +61,7 @@ function calculatePayment()
     //*                                                                              *//
     //********************************************************************************//
 
+	// validate form
 	formValidation();
 	
 } // End of calculatePayment function
@@ -102,13 +103,40 @@ function formValidation()
     //***************************************************************************************//
 
 	var errMsg = "";
-	document.getElementById('errors').innerHTML = "";
+	document.getElementById('errors').innerHTML = "";	// clear errors
 	
 	// validate all fields and set error message
-	errMsg += checkUserId(errMsg) + checkClient(errMsg) + checkPropValue(errMsg) + checkDownPay(errMsg) + checkIncome(errMsg) + checkPropDetails(errMsg) + checkPropLocation(errMsg) + checkMortYear(errMsg) + checkMortMonth(errMsg) + checkIntRate(errMsg) + checkAmortization(errMsg);
+	errMsg += checkUserId(errMsg) + checkClient(errMsg) + checkPropValue(errMsg) + 
+		checkDownPay(errMsg) + checkIncome(errMsg) + checkPropDetails(errMsg) + 
+		checkPropLocation(errMsg) + checkMortYear(errMsg) + checkMortMonth(errMsg) + 
+		checkIntRate(errMsg) + checkAmortization(errMsg);
 	
 	if(errMsg != "")
-		document.getElementById('errors').innerHTML = errMsg;
+	{
+		document.getElementById('errors').innerHTML = errMsg;	// show errors
+		
+		// cancel submission
+		return false;
+	}
+	else
+	{
+		var propValue = document.mortgage.propValue.value;
+		var downPay = document.mortgage.downPay.value;
+		var intRate = document.mortgage.intRate.value;
+		var amortization = document.mortgage.amortization.value;
+	
+		// recalculate monthly payment
+		detailPaymentCalculation(propValue, downPay, intRate, amortization);
+		
+		// change first character for client name to upper
+		document.mortgage.client.value.charAt(0).toUpperCase();
+		
+		// change value of jsActive to Y
+		document.mortgage.jsActive.value = 'Y';
+		
+		// go through with submission
+		return true;
+	}
 
 } // End of completeFormValidation
 
