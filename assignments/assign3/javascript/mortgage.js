@@ -129,7 +129,9 @@ function formValidation()
 		detailPaymentCalculation(propValue, downPay, intRate, amortization);
 		
 		// change first character for client name to upper
-		document.mortgage.client.value.charAt(0).toUpperCase();
+		var client = document.mortgage.client.value;
+		client = client.charAt(0).toUpperCase() + client.slice(1);
+		document.mortgage.client.value = client;
 		
 		// change value of jsActive to Y
 		document.mortgage.jsActive.value = 'Y';
