@@ -105,7 +105,7 @@ function formValidation()
 	document.getElementById('errors').innerHTML = "";
 	
 	// validate all fields and set error message
-	errMsg += checkUserId(errMsg) + checkClient(errMsg) + checkPropValue(errMsg) + checkDownPay(errMsg) + checkIncome(errMsg) + checkPropDetails(errMsg) + checkPropLocation(errMsg) + checkMortYear(errMsg) + checkMortMonth(errMsg);
+	errMsg += checkUserId(errMsg) + checkClient(errMsg) + checkPropValue(errMsg) + checkDownPay(errMsg) + checkIncome(errMsg) + checkPropDetails(errMsg) + checkPropLocation(errMsg) + checkMortYear(errMsg) + checkMortMonth(errMsg) + checkIntRate(errMsg) + checkAmortization(errMsg);
 	
 	if(errMsg != "")
 		document.getElementById('errors').innerHTML = errMsg;
@@ -381,7 +381,7 @@ function checkMortYear(errMsg)
 	return errMsg;
 }
 
-// validate mortgage month
+// validates mortgage month
 function checkMortMonth(errMsg)
 {
 	var mortMonth = document.mortgage.mortMonth.value;
@@ -404,6 +404,54 @@ function checkMortMonth(errMsg)
 	}
 	else
 		errMsg += "<p>You must enter a value for mortgage month.</p>";
+	
+	return errMsg;
+}
+
+// validates interest rate
+function checkIntRate(errMsg)
+{
+	var intRate = document.mortgage.intRate.value;
+	
+	// check if contains value
+	if(intRate)
+	{
+		// check if value is numeric
+		if(!(isNaN(intRate)))
+		{
+			// check if value is in range 3 to 16 inclusive
+			if(intRate < 3 || intRate > 16)
+				errMsg += "<p>Interest rate must be between 3 to 16 inclusive.</p>";
+		}
+		else
+			errMsg += "<p>Interest rate must be numeric.</p>";
+	}
+	else
+		errMsg += "<p>You must enter an interest rate.</p>";
+	
+	return errMsg;
+}
+
+// validates amortization
+function checkAmortization(errMsg)
+{
+	var amortization = document.mortgage.amortization.value;
+	
+	// check if contains value
+	if(amortization)
+	{
+		// check if value is numeric
+		if(!(isNaN(amortization)))
+		{
+			// check check if value is range 5 to 20 inclusive
+			if(amortization < 5 || amortization > 20)
+				errMsg += "<p>Amortization value should be between 5 and 20 inclusive.</p>";
+		}
+		else
+			errMsg += "<p>Value for amortization must be numeric.</p>";
+	}
+	else
+		errMsg += "<p>You must enter a value for amortization.</p>";
 	
 	return errMsg;
 }
