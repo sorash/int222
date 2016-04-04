@@ -296,21 +296,8 @@ function checkPropValue(errMsg)
 	// check if contains a value
 	if(propValue)
 	{
-		var x;
-		
 		// check if value is numeric
-		for(x = 0; x < propValue.length; x++)
-		{
-			var topCap = 48, bottomCap = 57;
-			var c = propValue.charCodeAt(x);
-		
-			if(c <= bottomCap && c >= topCap)
-				continue;
-			else
-				break;
-		}
-		
-		if(x == propValue.length)
+		if(isNum(propValue))
 		{
 			// check if value is a positive whole number
 			if((propValue > 0) && (propValue % 1 == 0))
@@ -339,21 +326,8 @@ function checkDownPay(errMsg)
 	// check if contains a value
 	if(downPay)
 	{
-		var x;
-		
 		// check if value is numeric
-		for(x = 0; x < downPay.length; x++)
-		{
-			var topCap = 48, bottomCap = 57;
-			var c = downPay.charCodeAt(x);
-		
-			if(c <= bottomCap && c >= topCap)
-				continue;
-			else
-				break;
-		}
-		
-		if(x == propValue.length)
+		if(isNum(downPay))
 		{
 			// check if value is a positive whole number
 			if((downPay > 0) && (downPay % 1 == 0))
@@ -418,21 +392,8 @@ function checkMortYear(errMsg)
 	// check if contains a value
 	if(mortYear)
 	{
-		var x;
-		
 		// check if value is numeric
-		for(x = 0; x < mortYear.length; x++)
-		{
-			var topCap = 48, bottomCap = 57;
-			var c = mortYear.charCodeAt(x);
-		
-			if(c <= bottomCap && c >= topCap)
-				continue;
-			else
-				break;
-		}
-		
-		if(x == mortYear.length)
+		if(isNum(mortYear))
 		{
 			// get current year
 			var curYear = new Date().getFullYear();
@@ -458,21 +419,8 @@ function checkMortMonth(errMsg)
 	// check if contains a value
 	if(mortMonth)
 	{
-		var x;
-		
 		// check if value is numeric
-		for(x = 0; x < mortMonth.length; x++)
-		{
-			var topCap = 48, bottomCap = 57;
-			var c = mortMonth.charCodeAt(x);
-		
-			if(c <= bottomCap && c >= topCap)
-				continue;
-			else
-				break;
-		}
-		
-		if(x == mortMonth.length)
+		if(isNum(mortMonth))
 		{
 			// get current month
 			var curMonth = new Date().getMonth() + 1;	// month is treated like an array...???
@@ -498,21 +446,8 @@ function checkIntRate(errMsg)
 	// check if contains value
 	if(intRate)
 	{
-		var x;
-		
 		// check if value is numeric
-		for(x = 0; x < intRate.length; x++)
-		{
-			var topCap = 48, bottomCap = 57;
-			var c = intRate.charCodeAt(x);
-		
-			if(c <= bottomCap && c >= topCap)
-				continue;
-			else
-				break;
-		}
-		
-		if(x == intRate.length)
+		if(isNum(intRate))
 		{
 			// check if value is in range 3 to 16 inclusive
 			if(intRate < 3 || intRate > 16)
@@ -535,21 +470,8 @@ function checkAmortization(errMsg)
 	// check if contains value
 	if(amortization)
 	{
-		var x;
-		
 		// check if value is numeric
-		for(x = 0; x < amortization.length; x++)
-		{
-			var topCap = 48, bottomCap = 57;
-			var c = amortization.charCodeAt(x);
-		
-			if(c <= bottomCap && c >= topCap)
-				continue;
-			else
-				break;
-		}
-		
-		if(x == amortization.length)
+		if(isNum(amortization))
 		{
 			// check check if value is range 5 to 20 inclusive
 			if(amortization < 5 || amortization > 20)
@@ -562,4 +484,26 @@ function checkAmortization(errMsg)
 		errMsg += "<p>You must enter a value for amortization.</p>";
 	
 	return errMsg;
+}
+
+// checks if variable is numeric
+function isNum(variable)
+{
+	var x;
+		
+	for(x = 0; x < variable.length; x++)
+	{
+		var topCap = 48, bottomCap = 57;
+		var c = variable.charCodeAt(x);
+		
+		if(c <= bottomCap && c >= topCap)
+			continue;
+		else
+			break;
+	}
+	
+	if(x == variable.length)
+		return true;
+	else
+		return false;
 }
