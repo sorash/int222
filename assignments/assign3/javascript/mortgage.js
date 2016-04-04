@@ -296,8 +296,21 @@ function checkPropValue(errMsg)
 	// check if contains a value
 	if(propValue)
 	{
+		var x;
+		
 		// check if value is numeric
-		if(!(isNaN(propValue)))
+		for(x = 0; x < propValue.length; x++)
+		{
+			var topCap = 48, bottomCap = 57;
+			var c = propValue.charCodeAt(x);
+		
+			if(c <= bottomCap && c >= topCap)
+				continue;
+			else
+				break;
+		}
+		
+		if(x == propValue.length)
 		{
 			// check if value is a positive whole number
 			if((propValue > 0) && (propValue % 1 == 0))
@@ -326,8 +339,21 @@ function checkDownPay(errMsg)
 	// check if contains a value
 	if(downPay)
 	{
+		var x;
+		
 		// check if value is numeric
-		if(!(isNaN(downPay)))
+		for(x = 0; x < downPay.length; x++)
+		{
+			var topCap = 48, bottomCap = 57;
+			var c = downPay.charCodeAt(x);
+		
+			if(c <= bottomCap && c >= topCap)
+				continue;
+			else
+				break;
+		}
+		
+		if(x == propValue.length)
 		{
 			// check if value is a positive whole number
 			if((downPay > 0) && (downPay % 1 == 0))
@@ -392,8 +418,21 @@ function checkMortYear(errMsg)
 	// check if contains a value
 	if(mortYear)
 	{
+		var x;
+		
 		// check if value is numeric
-		if(!(isNaN(mortYear)))
+		for(x = 0; x < mortYear.length; x++)
+		{
+			var topCap = 48, bottomCap = 57;
+			var c = mortYear.charCodeAt(x);
+		
+			if(c <= bottomCap && c >= topCap)
+				continue;
+			else
+				break;
+		}
+		
+		if(x == mortYear.length)
 		{
 			// get current year
 			var curYear = new Date().getFullYear();
@@ -419,8 +458,21 @@ function checkMortMonth(errMsg)
 	// check if contains a value
 	if(mortMonth)
 	{
+		var x;
+		
 		// check if value is numeric
-		if(!(isNaN(mortMonth)))
+		for(x = 0; x < mortMonth.length; x++)
+		{
+			var topCap = 48, bottomCap = 57;
+			var c = mortMonth.charCodeAt(x);
+		
+			if(c <= bottomCap && c >= topCap)
+				continue;
+			else
+				break;
+		}
+		
+		if(x == mortMonth.length)
 		{
 			// get current month
 			var curMonth = new Date().getMonth() + 1;	// month is treated like an array...???
@@ -446,8 +498,21 @@ function checkIntRate(errMsg)
 	// check if contains value
 	if(intRate)
 	{
+		var x;
+		
 		// check if value is numeric
-		if(!(isNaN(intRate)))
+		for(x = 0; x < intRate.length; x++)
+		{
+			var topCap = 48, bottomCap = 57;
+			var c = intRate.charCodeAt(x);
+		
+			if(c <= bottomCap && c >= topCap)
+				continue;
+			else
+				break;
+		}
+		
+		if(x == intRate.length)
 		{
 			// check if value is in range 3 to 16 inclusive
 			if(intRate < 3 || intRate > 16)
@@ -470,8 +535,21 @@ function checkAmortization(errMsg)
 	// check if contains value
 	if(amortization)
 	{
+		var x;
+		
 		// check if value is numeric
-		if(!(isNaN(amortization)))
+		for(x = 0; x < amortization.length; x++)
+		{
+			var topCap = 48, bottomCap = 57;
+			var c = amortization.charCodeAt(x);
+		
+			if(c <= bottomCap && c >= topCap)
+				continue;
+			else
+				break;
+		}
+		
+		if(x == amortization.length)
 		{
 			// check check if value is range 5 to 20 inclusive
 			if(amortization < 5 || amortization > 20)
