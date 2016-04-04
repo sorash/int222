@@ -8,20 +8,17 @@ body
 {
 	width: 1000px;
 	height: 900px;
-	border: 2px solid black;
+	margin-left: 5px;
+	margin-top: 5px;	
 }
 
 section
 {
+	width: 100%;
+	background: linear-gradient(to bottom, #FF7300 50%, #FFAA63);
     display: table;
-    border: 1px solid gray;
-	margin-left: 5px;
-	margin-right: 5px;
-	margin-top: 5px;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	padding-right: 5px;
-	width: 98%;
 }
 
 div.cell
@@ -29,6 +26,20 @@ div.cell
     display: table-cell;
     margin-bottom: 2cm;
     width: 35%;
+}
+
+div.table
+{
+	display: table;
+	width: 100%;
+}
+
+div.cell2
+{
+    display: table-cell;
+    margin-bottom: 2cm;
+    width: 50%;
+	vertical-align: middle;
 }
 
 hr
@@ -114,4 +125,43 @@ fieldset#errors
 	height: 410px;
 	font-size: 14px;
 	color: #FF0000;
+}
+
+input[type=submit]
+{
+	width: 200px;
+	height: 50px;
+}
+
+div#links, footer
+{
+	display: block;
+    text-align: center;
+	height: 50px;
+	line-height: 35px;
+	width: 100%;
+	background: #FFAA63;
+}
+
+div#links ul 
+{
+    list-style-type: none;
+	margin: 0px 0px;
+	width: 95%;
+	margin-left: -10px;
+}
+
+div#links ul li 
+{
+	display: inline-block;
+	margin: auto;
+}
+
+div#links ul li a 
+{
+	display: block;
+	line-height: 50px;
+    color: #000000;
+	padding-left: 17px;
+	padding-right: 17px;
 }
