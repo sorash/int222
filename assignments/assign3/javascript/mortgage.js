@@ -153,42 +153,35 @@ function checkUserId(errMsg)
 		// check if 5th value is a hyphen
 		if(userId.charAt(4) == '-')
 		{
-			var i, sum1 = 0, sum2 = 0;
+			// get the fields on each side of hyphen
+			fields = userId.split('-');
 			
-			// check if first 4 characters are numeric
-			for(i = 0; i < 4; i++)
+			// check if first field is numeric
+			if(isNum(fields[0]))
 			{
-				// break the loop if is not a number
-				if(isNaN(userId.charAt(i)))
-					break;
-				// else add it to the sum
-				else
-					sum1 += userId.charAt(i) * 1;
-			}
-			
-			// check if loop completed
-			if(i == 4)
-			{
-				// check if last 5 characters are numeric
-				for(i = 5; i < userId.length; i++)
+				// check if second field is numeric
+				if(isNum(fields[1]))
 				{
-					// break the loop if is not a number
-					if(isNaN(userId.charAt(i)))
-						break;
-					// else add it to the sum
-					else
-						sum2 += userId.charAt(i) * 1;
-				}
-				
-				// check if loop completed
-				if(i == userId.length)
-				{
-					// check if sum1 and sum2 are greater than zero
-					if(sum1 > 0 && sum2 > 0)
+					var i;
+					var sum = [0, 0];
+					
+					// get sums of fields
+					for(i = 0; i < 2; i++)
 					{
-						// check if sum2 is 2 more than double sum1
-						if(sum2 != (sum1 * 2) + 2)
-							errMsg += "<p>The sum of last 5 numbers is not double plus 2 of sum of first 4 numbers.</p>";
+						var x;
+						
+						for(x = 0; x < fields[i].length; x++)
+						{
+							sum[i] += fields[i][x] * 1;
+						}
+					}
+					
+					// check if sums are greater than zero
+					if(sum[0] > 0 && sum[1] > 0)
+					{
+						// check if sum of second field is 2 more than double the sum of first field
+						if(sum[1] != (sum[0] * 2) + 2)
+							errMsg += "<p>The sum of last 5 numbers of client ID is not double plus 2 of sum of first 4 numbers of the ID.</p>";
 					}
 					else
 						errMsg += "<p>The sum of the first 4 numbers or last 5 numbers is not greater than zero.</p>";
