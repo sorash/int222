@@ -147,53 +147,59 @@ function checkUserId(errMsg)
 {
 	var userId = document.mortgage.userId.value;
 	
-	// check that all 10 values are present
-	if(userId.length == 10)
+	// check that a value is present
+	if(userId)
 	{
-		// check if 5th value is a hyphen
-		if(userId.charAt(4) == '-')
+		// check that all 10 values are present
+		if(userId.length == 10)
 		{
-			// get the fields on each side of hyphen
-			fields = userId.split('-');
-			
-			// check if first field is numeric
-			if(isNum(fields[0]))
+			// check if 5th value is a hyphen
+			if(userId.charAt(4) == '-')
 			{
-				// check if second field is numeric
-				if(isNum(fields[1]))
+				// get the fields on each side of hyphen
+				fields = userId.split('-');
+			
+				// check if first field is numeric
+				if(isNum(fields[0]))
 				{
-					var sum = [0, 0];
-					
-					// get sums of fields
-					for(var i = 0; i < 2; i++)
-					{	
-						for(var x = 0; x < fields[i].length; x++)
-						{
-							sum[i] += fields[i][x] * 1;
-						}
-					}
-					
-					// check if sums are greater than zero
-					if(sum[0] > 0 && sum[1] > 0)
+					// check if second field is numeric
+					if(isNum(fields[1]))
 					{
-						// check if sum of second field is 2 more than double the sum of first field
-						if(sum[1] != (sum[0] * 2) + 2)
-							errMsg += "<p>The sum of last 5 numbers of client ID is not double plus 2 of sum of first 4 numbers of the ID.</p>";
+						var sum = [0, 0];
+					
+						// get sums of fields
+						for(var i = 0; i < 2; i++)
+						{	
+							for(var x = 0; x < fields[i].length; x++)
+							{
+								sum[i] += fields[i][x] * 1;
+							}
+						}
+					
+						// check if sums are greater than zero
+						if(sum[0] > 0 && sum[1] > 0)
+						{
+							// check if sum of second field is 2 more than double the sum of first field
+							if(sum[1] != (sum[0] * 2) + 2)
+								errMsg += "<p>The sum of last 5 numbers of client ID is not double plus 2 of sum of first 4 numbers of the ID.</p>";
+						}
+						else
+							errMsg += "<p>The sum of the first 4 numbers or last 5 numbers of client ID is not greater than zero.</p>";
 					}
 					else
-						errMsg += "<p>The sum of the first 4 numbers or last 5 numbers is not greater than zero.</p>";
+						errMsg += "<p>One of the last 5 characters of client ID is not numeric.</p>";
 				}
 				else
-					errMsg += "<p>One of the last 5 characters is not numeric.</p>";
+					errMsg += "<p>One of the first 4 characters of client ID is not numeric.</p>";
 			}
 			else
-				errMsg += "<p>One of the first 4 characters is not numeric.</p>";
+				errMsg += "<p>The 5th character of user ID must be a hyphen(-).</p>";
 		}
 		else
-			errMsg += "<p>The 5th character of user ID must be a hyphen(-).</p>";
+			errMsg += "<p>The user ID must be 10 characters long.</p>";
 	}
 	else
-		errMsg += "<p>The user ID must be 10 characters long.</p>";
+			errMsg += "<p>You must enter a value for user ID.</p>";
 	
 	return errMsg;
 }
