@@ -22,7 +22,7 @@ div.cell1
 {
     display: table-cell;
     margin-bottom: 2cm;
-    width: 30%;
+    width: 25%;
 }
 div.cell2
 {
@@ -70,6 +70,8 @@ label
 	width: 110px;
 	vertical-align: middle;
 	font-weight: bold;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 label.moreSpace
