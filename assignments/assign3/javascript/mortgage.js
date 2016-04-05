@@ -162,15 +162,12 @@ function checkUserId(errMsg)
 				// check if second field is numeric
 				if(isNum(fields[1]))
 				{
-					var i;
 					var sum = [0, 0];
 					
 					// get sums of fields
-					for(i = 0; i < 2; i++)
-					{
-						var x;
-						
-						for(x = 0; x < fields[i].length; x++)
+					for(var i = 0; i < 2; i++)
+					{	
+						for(var x = 0; x < fields[i].length; x++)
 						{
 							sum[i] += fields[i][x] * 1;
 						}
@@ -439,8 +436,21 @@ function checkIntRate(errMsg)
 	// check if contains value
 	if(intRate)
 	{
-		// check if value is numeric
-		if(isNum(intRate))
+		var x;
+		
+		// check if value is a decimal
+		for(x = 0; x < intRate.length; x++)
+		{
+			var topCap = 48, bottomCap = 57;
+			var c = intRate.charCodeAt(x);
+		
+			if(c <= bottomCap && c >= topCap || c == '.'.charCodeAt(0))
+				continue;
+			else
+				break;
+		}
+		
+		if(x == intRate.length)
 		{
 			// check if value is in range 3 to 16 inclusive
 			if(intRate < 3 || intRate > 16)
@@ -482,9 +492,7 @@ function checkAmortization(errMsg)
 // checks if variable is numeric
 function isNum(variable)
 {
-	var x;
-		
-	for(x = 0; x < variable.length; x++)
+	for(var x = 0; x < variable.length; x++)
 	{
 		var topCap = 48, bottomCap = 57;
 		var c = variable.charCodeAt(x);
