@@ -57,12 +57,33 @@ function showContents()
         	// Javascript function JSON.parse to parse JSON data
 			var jsArray = JSON.parse(httpRequest.responseText);
 
-			//**********************************
-			//       include your code here
-			//**********************************
+			// create a table
+			var table = "";
+			table += "<table class='table-1'>";
+			table += "<caption>School of ICT | Faculty of Applied Science and Enginnering Technology</caption>";
+			
+			// headers
+			table += "<tr>";
+			table += "<th>Program Area</th>";
+			table += "<th>Semester</th>";
+			table += "<th colspan=5>Courses</th>";
+			table += "</tr>";
 
+			// details
+			for(var x = 0; x < jsArray.length; x++)
+			{
+				table += "<tr>";
+				table += "<td>" + jsArray[x].name + "</td>";
+				table += "<td>" + jsArray[x].semester + "</td>";
+				for(var i = 0; i < jsArray[x].courses.length; i++)
+					table += "<td>" + jsArray[x].courses[i] + "</td>";
+				table += "</tr>";
+			}
+			
+			table += "</table>";
 
-			document.getElementById("data").innerHTML = str;
+			// show table
+			document.getElementById("data").innerHTML = table;
 		} 
 		else 
 		{
