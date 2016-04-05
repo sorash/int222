@@ -6,10 +6,7 @@ used by both pages
 
 body
 {
-	width: 1000px;
-	height: 900px;
-	margin-left: 5px;
-	margin-top: 5px;	
+	width: 960px;
 }
 
 section
@@ -21,7 +18,19 @@ section
 	padding-bottom: 5px;
 }
 
-div.cell
+div.cell1
+{
+    display: table-cell;
+    margin-bottom: 2cm;
+    width: 30%;
+}
+div.cell2
+{
+    display: table-cell;
+    margin-bottom: 2cm;
+    width: 35%;
+}
+div.cell3
 {
     display: table-cell;
     margin-bottom: 2cm;
@@ -34,7 +43,7 @@ div.table
 	width: 100%;
 }
 
-div.cell2
+div.cell4
 {
     display: table-cell;
     margin-bottom: 2cm;
