@@ -7,12 +7,14 @@ used by both pages
 body
 {
 	width: 960px;
+	background: linear-gradient(to bottom, #FF7300 50%, #FFAA63);
+	background-attachment: fixed;	/* fixes cut off of background */
+	
 }
 
 section
 {
 	width: 100%;
-	background: linear-gradient(to bottom, #FF7300 50%, #FFAA63);
     display: table;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -151,7 +153,6 @@ div#links, footer
 	height: 50px;
 	line-height: 35px;
 	width: 100%;
-	background: #FFAA63;
 }
 
 div#links ul 
