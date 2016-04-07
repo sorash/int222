@@ -12,6 +12,22 @@ body
 	
 }
 
+h1.title
+{
+	font-family: Courier New, sans-serif;
+	color: #C7C7C7;
+	font-size: 26px;
+	text-shadow: 3px 3px 2px #000000;
+	margin: auto;
+	padding-left: 15px;
+	margin-top: 10px;
+}
+
+span.title
+{
+	padding-left: 20%;
+}
+
 section
 {
 	width: 100%;
@@ -26,18 +42,21 @@ div.cell1
     display: table-cell;
     margin-bottom: 2cm;
     width: 25%;
+	vertical-align: middle;
 }
 div.cell2
 {
     display: table-cell;
     margin-bottom: 2cm;
     width: 35%;
+	vertical-align: middle;
 }
 div.cell3
 {
     display: table-cell;
     margin-bottom: 2cm;
     width: 35%;
+	vertical-align: middle;
 }
 
 div.table
@@ -57,6 +76,8 @@ div.cell4
 hr
 {
 	margin-left: 7px;
+	margin-top: 20px;
+	margin-bottom: 17px;
 }
 
 p.wallOfText
@@ -82,6 +103,16 @@ label.moreSpace
 	width: 130px;
 }
 
+label.stretch
+{
+	margin-top: 10px;
+}
+
+label.moveDown
+{
+	margin-top: 35px;
+}
+
 input
 {
 	margin-top: 5px;
@@ -89,6 +120,11 @@ input
 	height: 30px;
 	vertical-align: middle;
 	color: #2B2B2B;
+}
+
+input.moveDown
+{
+	margin-top: 35px;
 }
 
 div.selects
@@ -113,6 +149,20 @@ fieldset
 	margin-bottom: 15px;
 	margin-top: 15px;
 	margin-left: 8px;
+}
+
+fieldset.stretch
+{
+	height: 528px;
+	margin-top: 15px;
+}
+
+legend
+{
+	border: 2px outset #969696;
+	padding: 5px;
+	background: #1C1C1C;
+	font-size: 18px;
 }
 
 textarea
