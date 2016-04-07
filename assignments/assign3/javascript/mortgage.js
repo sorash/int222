@@ -113,7 +113,7 @@ function formValidation()
 	
 	if(errMsg != "")
 	{
-		document.getElementById('errors').innerHTML = errMsg;	// show errors
+		document.getElementById('errors').innerHTML += errMsg;	// show errors
 		
 		// cancel submission
 		return false;
