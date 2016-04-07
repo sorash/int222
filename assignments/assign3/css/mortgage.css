@@ -7,7 +7,7 @@ used by both pages
 body
 {
 	width: 960px;
-	background: linear-gradient(to bottom, #FF7300 50%, #FFAA63);
+	background: #2B2B2B;
 	background-attachment: fixed;	/* fixes cut off of background */
 	
 }
@@ -18,6 +18,7 @@ section
     display: table;
 	padding-top: 5px;
 	padding-bottom: 5px;
+	color: #C7C7C7;
 }
 
 div.cell1
@@ -87,6 +88,7 @@ input
 	margin-bottom: 5px;
 	height: 30px;
 	vertical-align: middle;
+	color: #2B2B2B;
 }
 
 div.selects
@@ -103,6 +105,7 @@ select
 	padding-top: 3px;
 	margin-top: 5px;
 	margin-bottom: 5px;
+	color: #2B2B2B;
 }
 
 fieldset
@@ -117,6 +120,7 @@ textarea
 	resize: none;
 	margin-top: 5px;
 	margin-bottom: 5px;
+	color: #2B2B2B;
 }
 
 .centerElem
@@ -153,6 +157,7 @@ div#links, footer
 	height: 50px;
 	line-height: 35px;
 	width: 100%;
+	color: #C7C7C7;	
 }
 
 div#links ul 
@@ -176,4 +181,5 @@ div#links ul li a
     color: #000000;
 	padding-left: 17px;
 	padding-right: 17px;
+	color: #C7C7C7;
 }
