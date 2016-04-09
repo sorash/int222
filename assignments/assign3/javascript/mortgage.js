@@ -239,7 +239,7 @@ function checkClient(errMsg)
 		if(x == client.length)
 		{
 			// check first 3 letters for alphabetic characters
-			for(x = 0; x < 4; x++)
+			for(x = 0; x < 3; x++)
 			{
 				var topCap = 'A'.charCodeAt(0), bottomCap = 'Z'.charCodeAt(0), topLow = 'a'.charCodeAt(0), bottomLow = 'z'.charCodeAt(0);
 				var c = client.charCodeAt(x);
@@ -251,7 +251,7 @@ function checkClient(errMsg)
 			}
 			
 			// check if loop compeleted
-			if(x == 4)
+			if(x == 3)
 			{
 				// check if name contains apostrophe at beginning or end
 				if(client.charAt(0) != '\'' && client.charAt(client.length - 1) != '\'')	// check for first letter doesn't really ever fire since first letter has to be alphabetic with last check...
