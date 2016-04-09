@@ -148,7 +148,7 @@ function checkUserId(errMsg)
 	var userId = document.mortgage.userId.value;
 	
 	// check that a value is present
-	if(userId)
+	if(valPres(userId))
 	{
 		// check that all 10 values are present
 		if(userId.length == 10)
@@ -210,7 +210,7 @@ function checkClient(errMsg)
 	var client = document.mortgage.client.value;
 	
 	// check if a value exists
-	if(client)
+	if(valPres(client))
 	{
 		/* RegEx use not allowed in checking for this assignment so RIP these two...
 		// check if value is alphabetic
@@ -290,7 +290,7 @@ function checkPropValue(errMsg)
 	var propValue = document.mortgage.propValue.value;
 	
 	// check if contains a value
-	if(propValue)
+	if(valPres(propValue))
 	{
 		// check if value is numeric
 		if(isNum(propValue))
@@ -320,7 +320,7 @@ function checkDownPay(errMsg)
 	var downPay = document.mortgage.downPay.value;
 	
 	// check if contains a value
-	if(downPay)
+	if(valPres(downPay))
 	{
 		// check if value is numeric
 		if(isNum(downPay))
@@ -386,7 +386,7 @@ function checkMortYear(errMsg)
 	var mortYear = document.mortgage.mortYear.value;
 	
 	// check if contains a value
-	if(mortYear)
+	if(valPres(mortYear))
 	{
 		// check if value is numeric
 		if(isNum(mortYear))
@@ -413,7 +413,7 @@ function checkMortMonth(errMsg)
 	var mortMonth = document.mortgage.mortMonth.value;
 	
 	// check if contains a value
-	if(mortMonth)
+	if(valPres(mortMonth))
 	{
 		// check if value is numeric
 		if(isNum(mortMonth))
@@ -440,7 +440,7 @@ function checkIntRate(errMsg)
 	var intRate = document.mortgage.intRate.value;
 	
 	// check if contains value
-	if(intRate)
+	if(valPres(intRate))
 	{
 		var x;
 		
@@ -477,7 +477,7 @@ function checkAmortization(errMsg)
 	var amortization = document.mortgage.amortization.value;
 	
 	// check if contains value
-	if(amortization)
+	if(valPres(amortization))
 	{
 		// check if value is numeric
 		if(isNum(amortization))
@@ -493,6 +493,14 @@ function checkAmortization(errMsg)
 		errMsg += "<p>You must enter a value for amortization.</p>";
 	
 	return errMsg;
+}
+
+// checks if a value is present
+function valPres(val)
+{
+	if(val && val != ' ')
+		return true;
+	return false;
 }
 
 // checks if variable is numeric
