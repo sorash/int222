@@ -157,7 +157,7 @@ function checkUserId(errMsg)
 			if(userId.charAt(4) == '-')
 			{
 				// get the fields on each side of hyphen
-				fields = userId.split('-');
+				var fields = userId.split('-');
 			
 				// check if first field is numeric
 				if(isNum(fields[0]))
